@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&amp;family=Inter:wght@400;500;700&amp;family=Montserrat:wght@700&amp;display=swap"
+        rel="stylesheet" />
+    <!--[if lt IE 9]>
+	<script src="js/html5shiv/html5shiv.js"></script>
+<![endif]-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="cleartype" content="on">
+    <title>VTAC: Victorian Tertiary Admissions Centre</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://www.vtac.edu.au/templates/secondary/css/custom.css" rel="stylesheet" />
+    <script>
+        var dataLayer = window.dataLayer = window.dataLayer || [];
+    </script>
+    <style>
+        .ui-widget {
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 1rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-NFK5FF" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NFK5FF');</script>
+    <!-- End Google Tag Manager -->
+    <!-- header page -->
+
+    <nav class="masthead navbar navbar-expand-lg sticky-top navbar-light py-0 my-0 container-fluid">
+        <div class="vtac-circles"> <img class="circle-white"
+                src="https://www.vtac.edu.au/templates/primary5/images/circle-white.png" alt="circle white"> <a
+                class="navbar-brand" href="/"> <img src="https://www.vtac.edu.au/files/images/logo.png" alt="VTAC logo"
+                    class="logo"> </a> </div>
+    </nav>
+    <!-- #mainmenu -->
+
+    <!-- header page -->
+    <article id="main" class="main-form container-fluid mt-2 mb-5" style="min-height:500px;">
+        <section class="contentbody container">
+            <h1 class="pt-3">Meeting VCE prerequisites with interstate or IB studies</h1>
+            <div id="searchcontainer">
+                <div id="refine">
+                    <h2>Interstate subjects meeting Victorian prerequisites</h2>
+
+                    <p>Prerequisite studies listed in CourseSearch are compulsory for course entry. These are listed as
+                        studies from the Victorian Certificate of Education (VCE). If you are studying in another
+                        Australian state, or studying the International Baccalaureate (IB), you can use the tool below
+                        to check which studies from your home curriculum will meet Victorian prerequisites.</p>
+                    <p><strong>Please note:</strong>The subjects listed refer to current subjects only. If the name and
+                        subject code do not match your results, refer to the Interstate subject guide to Victorian
+                        prerequisites on the Reports and Statistics page. This tool is provided as a guide only, and is
+                        based on the information that you have entered. If you have any questions about how to use this
+                        tool, please contact VTAC for assistance..</p>
+
+                    <form id="searchguide" data-gtm-form-interact-id="0">
+                        <input type="hidden" id="ap" value="1">
+                        <input type="hidden" id="currentYear" value="2018">
+                        <div class="clearfix">
+                            <label for="addsubject" class="form-label">Please enter a Victorian subject name, or choose
+                                from the list below: </label>
+                            <input id="addsubject" type="text" value=""
+                                class="w-50 add-subject ui-autocomplete-input form-control"
+                                placeholder="Enter VCE or VCE VET study" dcvalue="" autocomplete="off"
+                                data-gtm-form-interact-field-id="0">
+                            <p class="description">
+                                <strong>Common prerequisites:</strong>
+                                <a class="commonPre" cp="EH" href="#" cid="25896">Any English (except EAL)</a>
+                                | <a class="commonPre" cp="EF" href="#" cid="25906">English (EAL)</a>
+                                | <a class="commonPre" cp="NJ" href="#" cid="26568">Maths: Mathematical Methods</a>
+                                | <a class="commonPre" cp="CH" href="#" cid="26146">Chemistry</a>
+                            </p>
+                            <div id="showState" class="collapse">
+                                <label for="state" class="form-label">Select your home curriculum:</label>
+                                <select id="state" name="state" class="form-control w-50"
+                                    data-gtm-form-interact-field-id="1">
+                                    <option value="">Select:</option>
+                                    <option value="ACT">Australian Capital Territory</option>
+                                    <option value="NSW">New South Wales</option>
+                                    <option value="QLD">Queensland</option>
+                                    <option value="SA">South Australia / Northern Territory</option>
+                                    <option value="TAS">Tasmania</option>
+                                    <option value="WA">Western Australia</option>
+                                    <option value="IB">International Baccalaureate</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="noSubjectFoundDiv" style="display: none;">
+                            <p>No information available for this subject</p>
+                        </div>
+
+                        <div id="showConversion" class="collapse">
+                            <div class="accordion mt-5" id="accordionSubjects">
+                                <div class="accordion-item">
+                                    <h4 class="accordion-header mt-0" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            2022 New
+                                            South Wales subjects meeting Victorian prerequisite for Maths: Specialist
+                                            Mathematics </button>
+                                    </h4>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionSubjects">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>Mathematics Extension 2 (15260)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="showConversionContainer" class="collapse">
+                            <h3 id="datatableH3">Score conversions for New South Wales subjects</h3>
+                            <h4>For Extension subjects:</h4>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th class="datatableTH1" style="width: 30%">NSW Performance Band</th>
+                                        <th>Meets Victorian Prerequisite at a specified level of</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="datatableTBody">
+                                    <tr>
+                                        <td>E4</td>
+                                        <td>42</td>
+                                    </tr>
+                                    <tr>
+                                        <td>E3</td>
+                                        <td>32</td>
+                                    </tr>
+                                    <tr>
+                                        <td>E2</td>
+                                        <td>23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>E1</td>
+                                        <td>16</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h4>For 2 unit subjects:</h4>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th class="datatableTH1" style="width: 30%">NSW Performance Band</th>
+                                        <th>Meets Victorian Prerequisite at a specified level of</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="datatableTBody">
+                                    <tr>
+                                        <td>6</td>
+                                        <td>42</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>35</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>29</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>16</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+                <div id="showConversionLoading" class="hidden" style="height: 200px; display: none;">
+                    <div class="spinner"></div>
+
+                </div>
+                </form>
+                <div style="clear:both;"></div>
+            </div>
+            </div>
+        </section>
+    </article>
+
+
+    <!--Footer-->
+    <footer class="mt-5 page-footer text-center font-small" id="bottom">
+        <!--Section: fat footer-->
+        <section class="fat-footer">
+            <div class="row me-0">
+                <div class="col-md-4 col-sm-12 text-sm-start ps-5 pt-2 mt-4">
+                    <p>&copy; Victorian Tertiary Admissions Centre (VTAC) 2023</p>
+                    <!-- Social icons -->
+                    <div class="pb-4 connect"> <a href="https://www.facebook.com/vtacguide"><img
+                                src="https://www.vtac.edu.au/files/images/icons/logo-facebook.png" alt="facebook"></a>
+                        <a href="https://www.instagram.com/vtacguide/"><img
+                                src="https://www.vtac.edu.au/files/images/icons/logo-instagram.png" alt="instagram"></a>
+                        <a href="https://twitter.com/vtacguide"><img
+                                src="https://www.vtac.edu.au/files/images/icons/logo-twitter.png" alt="twitter"></a> <a
+                            href="https://www.youtube.com/user/vtacmedia"><img
+                                src="https://www.vtac.edu.au/files/images/icons/logo-youtube.png" alt="youtube"></a>
+                    </div>
+                    <!-- Social icons -->
+                    <p class="d-md-inline" style="position: relative; z-index: 2;"> <a class="pe-5"
+                            href="/copyright/">Copyright</a> <a class="pe-5" href="/privacy/">Privacy</a> <a
+                            href="/legals/">Legals</a> </p>
+                    <p class="mt-3">40 Park Street <br>
+                        South Melbourne VIC 3205 <br>
+                        AUSTRALIA </p>
+                    <p>Phone: <a class="d-inline" href="tel:+61399261020">+613
+                            9926 1020</a> <br>
+                        <small>9:30am-5pm Melbourne time, Mon-Fri</small>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!--/.Footer-->
+    <!-- #sitemap -->
+    <div class="mobileIndicator"></div>
+    <script>
+        var subjectJson = JSON.parse('[{"id":25906,"code":"EF","year":2023,"name":"English (EAL)","type":"G","vcaaUnit1Code":null,"vcaaUnit2Code":null,"vcaaUnit34Code":null,"applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":true,"includeInPrereqExplorer":false,"programType":"V","unitName":"English (EAL) "},{"id":25895,"code":"BK","year":2023,"name":"Any Business","type":"G","vcaaUnit1Code":null,"vcaaUnit2Code":null,"vcaaUnit34Code":null,"applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":true,"includeInPrereqExplorer":false,"programType":null,"unitName":"Any Business "},{"id":25896,"code":"EH","year":2023,"name":"English other than EAL","type":"G","vcaaUnit1Code":null,"vcaaUnit2Code":null,"vcaaUnit34Code":null,"applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":true,"includeInPrereqExplorer":false,"programType":null,"unitName":"English other than EAL "},{"id":25897,"code":"EX","year":2023,"name":"Any English","type":"G","vcaaUnit1Code":null,"vcaaUnit2Code":null,"vcaaUnit34Code":null,"applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":true,"includeInPrereqExplorer":false,"programType":null,"unitName":"Any English "},{"id":25898,"code":"HM","year":2023,"name":"Any Humanities","type":"G","vcaaUnit1Code":null,"vcaaUnit2Code":null,"vcaaUnit34Code":null,"applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":true,"includeInPrereqExplorer":false,"programType":null,"unitName":"Any Humanities "},{"id":25899,"code":"HT","year":2023,"name":"Any History","type":"G","vcaaUnit1Code":null,"vcaaUnit2Code":null,"vcaaUnit34Code":null,"applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":true,"includeInPrereqExplorer":false,"programType":null,"unitName":"Any History "},{"id":25900,"code":"IF","year":2023,"name":"Any Information Technology","type":"G","vcaaUnit1Code":null,"vcaaUnit2Code":null,"vcaaUnit34Code":null,"applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":true,"includeInPrereqExplorer":false,"programType":null,"unitName":"Any Information Technology "},{"id":25901,"code":"LO","year":2023,"name":"Any LOTE","type":"G","vcaaUnit1Code":null,"vcaaUnit2Code":null,"vcaaUnit34Code":null,"applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":true,"includeInPrereqExplorer":false,"programType":null,"unitName":"Any LOTE "},{"id":25902,"code":"M2","year":2023,"name":"VCE Music solo/group performance","type":"G","vcaaUnit1Code":null,"vcaaUnit2Code":null,"vcaaUnit34Code":null,"applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":true,"includeInPrereqExplorer":false,"programType":null,"unitName":"VCE Music solo/group performance "},{"id":25903,"code":"MX","year":2023,"name":"Any Music","type":"G","vcaaUnit1Code":null,"vcaaUnit2Code":null,"vcaaUnit34Code":null,"applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":true,"includeInPrereqExplorer":false,"programType":null,"unitName":"Any Music "},{"id":25904,"code":"NM","year":2023,"name":"Any Mathematics","type":"G","vcaaUnit1Code":null,"vcaaUnit2Code":null,"vcaaUnit34Code":null,"applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":true,"includeInPrereqExplorer":false,"programType":null,"unitName":"Any Mathematics "},{"id":25905,"code":"SN","year":2023,"name":"Any Science","type":"G","vcaaUnit1Code":null,"vcaaUnit2Code":null,"vcaaUnit34Code":null,"applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":true,"includeInPrereqExplorer":false,"programType":null,"unitName":"Any Science "},{"id":26574,"code":"PH","year":2023,"name":"Physics","type":"V","vcaaUnit1Code":"PH01","vcaaUnit2Code":"PH02","vcaaUnit34Code":"PH03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Physics "},{"id":26521,"code":"LO52","year":2023,"name":"Languages: Yiddish","type":"V","vcaaUnit1Code":"LO52","vcaaUnit2Code":"LO52","vcaaUnit34Code":"LO52","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Yiddish "},{"id":26573,"code":"PG","year":2023,"name":"Languages: Portuguese","type":"V","vcaaUnit1Code":"LO33","vcaaUnit2Code":"LO33","vcaaUnit34Code":"LO33","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Portuguese "},{"id":26572,"code":"PE","year":2023,"name":"Physical Education","type":"V","vcaaUnit1Code":"PE01","vcaaUnit2Code":"PE02","vcaaUnit34Code":"PE03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Physical Education "},{"id":26571,"code":"OS","year":2023,"name":"Outdoor And Environmental Studies","type":"V","vcaaUnit1Code":"OS01","vcaaUnit2Code":"OS02","vcaaUnit34Code":"OS03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Outdoor And Environmental Studies "},{"id":26570,"code":"NS","year":2023,"name":"Maths: Specialist Mathematics","type":"V","vcaaUnit1Code":"MA09","vcaaUnit2Code":"MA09","vcaaUnit34Code":"MA09","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Maths: Specialist Mathematics "},{"id":26568,"code":"NJ","year":2023,"name":"Maths: Mathematical Methods","type":"V","vcaaUnit1Code":"MA11","vcaaUnit2Code":"MA11","vcaaUnit34Code":"MA11","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Maths: Mathematical Methods "},{"id":26567,"code":"NF","year":2023,"name":"Maths: Further Mathematics","type":"V","vcaaUnit1Code":null,"vcaaUnit2Code":null,"vcaaUnit34Code":"MA07","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Maths: Further Mathematics (Unit 3 & 4)"},{"id":26552,"code":"ML","year":2023,"name":"Languages: Maltese","type":"V","vcaaUnit1Code":"LO21","vcaaUnit2Code":"LO21","vcaaUnit34Code":"LO21","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Maltese "},{"id":26540,"code":"MG","year":2023,"name":"Languages: Greek","type":"V","vcaaUnit1Code":"LO22","vcaaUnit2Code":"LO22","vcaaUnit34Code":"LO22","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Greek "},{"id":26537,"code":"ME","year":2023,"name":"Media","type":"V","vcaaUnit1Code":"ME01","vcaaUnit2Code":"ME02","vcaaUnit34Code":"ME03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Media "},{"id":26536,"code":"MD","year":2023,"name":"Music Style And Composition","type":"V","vcaaUnit1Code":"MS01","vcaaUnit2Code":"MS02","vcaaUnit34Code":"MS03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Music Style And Composition "},{"id":26528,"code":"MA","year":2023,"name":"Languages: Macedonian","type":"V","vcaaUnit1Code":"LO20","vcaaUnit2Code":"LO20","vcaaUnit34Code":"LO20","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Macedonian "},{"id":26527,"code":"LS","year":2023,"name":"Legal Studies","type":"V","vcaaUnit1Code":"LS01","vcaaUnit2Code":"LS02","vcaaUnit34Code":"LS03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Legal Studies "},{"id":26526,"code":"LO57","year":2023,"name":"Chinese Language Culture And Society","type":"V","vcaaUnit1Code":"LO57","vcaaUnit2Code":"LO57","vcaaUnit34Code":"LO57","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Chinese Language Culture And Society "},{"id":26524,"code":"LO55","year":2023,"name":"Languages: Karen","type":"V","vcaaUnit1Code":"LO55","vcaaUnit2Code":"LO55","vcaaUnit34Code":"LO55","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Karen "},{"id":26523,"code":"LO54","year":2023,"name":"Languages: Vietnamese First Language","type":"V","vcaaUnit1Code":"LO54","vcaaUnit2Code":"LO54","vcaaUnit34Code":"LO54","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Vietnamese First Language "},{"id":26522,"code":"LO53","year":2023,"name":"Languages: Chin Hakha","type":"V","vcaaUnit1Code":"LO53","vcaaUnit2Code":"LO53","vcaaUnit34Code":"LO53","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Chin Hakha "},{"id":26520,"code":"LO51","year":2023,"name":"Languages: Classical Hebrew","type":"V","vcaaUnit1Code":"LO51","vcaaUnit2Code":"LO51","vcaaUnit34Code":"LO51","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Classical Hebrew "},{"id":26688,"code":"SE03","year":2023,"name":"Systems Engineering","type":"V","vcaaUnit1Code":"SE01","vcaaUnit2Code":"SE02","vcaaUnit34Code":"SE03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Systems Engineering "},{"id":26795,"code":"VC","year":2023,"name":"Visual Communication Design","type":"V","vcaaUnit1Code":"VC01","vcaaUnit2Code":"VC02","vcaaUnit34Code":"VC03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Visual Communication Design "},{"id":26788,"code":"TU","year":2023,"name":"Languages: Turkish","type":"V","vcaaUnit1Code":"LO29","vcaaUnit2Code":"LO29","vcaaUnit34Code":"LO29","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Turkish "},{"id":26786,"code":"TS","year":2023,"name":"Theatre Studies","type":"V","vcaaUnit1Code":"TS01","vcaaUnit2Code":"TS02","vcaaUnit34Code":"TS03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Theatre Studies "},{"id":26748,"code":"TA","year":2023,"name":"Languages: Tamil","type":"V","vcaaUnit1Code":"LO43","vcaaUnit2Code":"LO43","vcaaUnit34Code":"LO43","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Tamil "},{"id":26747,"code":"SW","year":2023,"name":"Languages: Swedish","type":"V","vcaaUnit1Code":"LO28","vcaaUnit2Code":"LO28","vcaaUnit34Code":"LO28","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Swedish "},{"id":26703,"code":"SP","year":2023,"name":"Languages: Spanish","type":"V","vcaaUnit1Code":"LO27","vcaaUnit2Code":"LO27","vcaaUnit34Code":"LO27","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Spanish "},{"id":26702,"code":"SO03","year":2023,"name":"Sociology","type":"V","vcaaUnit1Code":null,"vcaaUnit2Code":null,"vcaaUnit34Code":"SO03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Sociology (Unit 3 & 4)"},{"id":26689,"code":"SI","year":2023,"name":"Languages: Sinhala","type":"V","vcaaUnit1Code":"LO34","vcaaUnit2Code":"LO34","vcaaUnit34Code":"LO34","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Sinhala "},{"id":26576,"code":"PL","year":2023,"name":"Philosophy","type":"V","vcaaUnit1Code":"PL01","vcaaUnit2Code":"PL02","vcaaUnit34Code":"PL03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Philosophy "},{"id":26687,"code":"SE","year":2023,"name":"Languages: Serbian","type":"V","vcaaUnit1Code":"LO25","vcaaUnit2Code":"LO25","vcaaUnit34Code":"LO25","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Serbian "},{"id":26683,"code":"RU","year":2023,"name":"Languages: Russian","type":"V","vcaaUnit1Code":"LO24","vcaaUnit2Code":"LO24","vcaaUnit34Code":"LO24","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Russian "},{"id":26641,"code":"RS","year":2023,"name":"Religion And Society","type":"V","vcaaUnit1Code":"RE01","vcaaUnit2Code":"RE02","vcaaUnit34Code":"RE03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Religion And Society "},{"id":26640,"code":"RO","year":2023,"name":"Languages: Romanian","type":"V","vcaaUnit1Code":"LO42","vcaaUnit2Code":"LO42","vcaaUnit34Code":"LO42","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Romanian "},{"id":26606,"code":"PY","year":2023,"name":"Psychology","type":"V","vcaaUnit1Code":"PY01","vcaaUnit2Code":"PY02","vcaaUnit34Code":"PY03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Psychology "},{"id":26597,"code":"PS05","year":2023,"name":"Global Politics","type":"V","vcaaUnit1Code":null,"vcaaUnit2Code":null,"vcaaUnit34Code":"PS05","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Global Politics (Unit 3 & 4)"},{"id":26578,"code":"PO","year":2023,"name":"Languages: Polish","type":"V","vcaaUnit1Code":"LO23","vcaaUnit2Code":"LO23","vcaaUnit34Code":"LO23","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Polish "},{"id":26577,"code":"PN","year":2023,"name":"Languages: Persian","type":"V","vcaaUnit1Code":"LO32","vcaaUnit2Code":"LO32","vcaaUnit34Code":"LO32","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Persian "},{"id":26146,"code":"CH","year":2023,"name":"Chemistry","type":"V","vcaaUnit1Code":"CH01","vcaaUnit2Code":"CH02","vcaaUnit34Code":"CH03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Chemistry "},{"id":26423,"code":"FR","year":2023,"name":"Languages: French","type":"V","vcaaUnit1Code":"LO09","vcaaUnit2Code":"LO09","vcaaUnit34Code":"LO09","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: French "},{"id":26394,"code":"FP","year":2023,"name":"Languages: Filipino","type":"V","vcaaUnit1Code":"LO45","vcaaUnit2Code":"LO45","vcaaUnit34Code":"LO45","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Filipino "},{"id":26356,"code":"EV","year":2023,"name":"Environmental Science","type":"V","vcaaUnit1Code":"EV01","vcaaUnit2Code":"EV02","vcaaUnit34Code":"EV03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Environmental Science "},{"id":26286,"code":"EC","year":2023,"name":"Economics","type":"V","vcaaUnit1Code":"EC01","vcaaUnit2Code":"EC02","vcaaUnit34Code":"EC03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Economics "},{"id":26285,"code":"DU","year":2023,"name":"Languages: Dutch","type":"V","vcaaUnit1Code":"LO07","vcaaUnit2Code":"LO07","vcaaUnit34Code":"LO07","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Dutch "},{"id":26284,"code":"DT","year":2023,"name":"Product Design And Technology","type":"V","vcaaUnit1Code":"DT01","vcaaUnit2Code":"DT02","vcaaUnit34Code":"DT03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Product Design And Technology "},{"id":26283,"code":"DR","year":2023,"name":"Drama","type":"V","vcaaUnit1Code":"DR01","vcaaUnit2Code":"DR02","vcaaUnit34Code":"DR03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Drama "},{"id":26277,"code":"DA","year":2023,"name":"Dance","type":"V","vcaaUnit1Code":"DA01","vcaaUnit2Code":"DA02","vcaaUnit34Code":"DA03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Dance "},{"id":26206,"code":"CR","year":2023,"name":"Languages: Croatian","type":"V","vcaaUnit1Code":"LO05","vcaaUnit2Code":"LO05","vcaaUnit34Code":"LO05","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Croatian "},{"id":26156,"code":"CN","year":2023,"name":"Languages: Chinese First Language","type":"V","vcaaUnit1Code":"LO04","vcaaUnit2Code":"LO04","vcaaUnit34Code":"LO04","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Chinese First Language "},{"id":26153,"code":"CL","year":2023,"name":"Languages: Chinese Second Language","type":"V","vcaaUnit1Code":"LO39","vcaaUnit2Code":"LO39","vcaaUnit34Code":"LO39","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Chinese Second Language "},{"id":26152,"code":"CK","year":2023,"name":"Languages: Chinese Second Lang. Adv.","type":"V","vcaaUnit1Code":"LO48","vcaaUnit2Code":"LO48","vcaaUnit34Code":"LO48","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Chinese Second Lang. Adv. "},{"id":26434,"code":"FT","year":2023,"name":"Food Studies","type":"V","vcaaUnit1Code":"FY01","vcaaUnit2Code":"FY02","vcaaUnit34Code":"FY03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Food Studies "},{"id":26140,"code":"CC","year":2023,"name":"Classical Studies","type":"V","vcaaUnit1Code":"CS01","vcaaUnit2Code":"CS02","vcaaUnit34Code":"CS03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Classical Studies "},{"id":26107,"code":"BM","year":2023,"name":"Business Management","type":"V","vcaaUnit1Code":"BM01","vcaaUnit2Code":"BM02","vcaaUnit34Code":"BM03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Business Management "},{"id":26105,"code":"BI","year":2023,"name":"Biology","type":"V","vcaaUnit1Code":"BI01","vcaaUnit2Code":"BI02","vcaaUnit34Code":"BI03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Biology "},{"id":26032,"code":"AU","year":2023,"name":"Languages: Auslan","type":"V","vcaaUnit1Code":"LO03","vcaaUnit2Code":"LO03","vcaaUnit34Code":"LO03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Auslan "},{"id":26031,"code":"AT","year":2023,"name":"Art","type":"V","vcaaUnit1Code":"AR01","vcaaUnit2Code":"AR02","vcaaUnit34Code":"AR03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Art "},{"id":26030,"code":"AR","year":2023,"name":"Languages: Arabic","type":"V","vcaaUnit1Code":"LO02","vcaaUnit2Code":"LO02","vcaaUnit34Code":"LO02","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Arabic "},{"id":26000,"code":"AM","year":2023,"name":"Languages: Armenian","type":"V","vcaaUnit1Code":"LO44","vcaaUnit2Code":"LO44","vcaaUnit34Code":"LO44","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Armenian "},{"id":25998,"code":"AI","year":2023,"name":"Languages: Indigenous Languages","type":"V","vcaaUnit1Code":"LO38","vcaaUnit2Code":"LO38","vcaaUnit34Code":"LO38","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Indigenous Languages "},{"id":25997,"code":"AH","year":2023,"name":"Agricultural & Horticultural Studies","type":"V","vcaaUnit1Code":"AH01","vcaaUnit2Code":"AH02","vcaaUnit34Code":"AH03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Agricultural & Horticultural Studies "},{"id":25927,"code":"AG","year":2023,"name":"Languages: Classical Greek","type":"V","vcaaUnit1Code":"LO01","vcaaUnit2Code":"LO01","vcaaUnit34Code":"LO01","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Classical Greek "},{"id":25908,"code":"AC","year":2023,"name":"Accounting","type":"V","vcaaUnit1Code":"AC01","vcaaUnit2Code":"AC02","vcaaUnit34Code":"AC03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Accounting "},{"id":26506,"code":"IT03","year":2023,"name":"Applied Comp: Software Development","type":"V","vcaaUnit1Code":null,"vcaaUnit2Code":null,"vcaaUnit34Code":"IT03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Applied Comp: Software Development (Unit 3 & 4)"},{"id":26519,"code":"LO50","year":2023,"name":"Languages: Bosnian","type":"V","vcaaUnit1Code":"LO50","vcaaUnit2Code":"LO50","vcaaUnit34Code":"LO50","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Bosnian "},{"id":26518,"code":"LO49","year":2023,"name":"Languages: Punjabi","type":"V","vcaaUnit1Code":"LO49","vcaaUnit2Code":"LO49","vcaaUnit34Code":"LO49","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Punjabi "},{"id":26517,"code":"LO31","year":2023,"name":"Languages: Vietnamese Second Lang.","type":"V","vcaaUnit1Code":"LO31","vcaaUnit2Code":"LO31","vcaaUnit34Code":"LO31","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Vietnamese Second Lang. "},{"id":26516,"code":"LI","year":2023,"name":"Literature","type":"V","vcaaUnit1Code":"LI01","vcaaUnit2Code":"LI01","vcaaUnit34Code":"LI01","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Literature "},{"id":26513,"code":"LA","year":2023,"name":"Languages: Latin","type":"V","vcaaUnit1Code":"LO17","vcaaUnit2Code":"LO17","vcaaUnit34Code":"LO17","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Latin "},{"id":26512,"code":"KS","year":2023,"name":"Languages: Korean Second Language","type":"V","vcaaUnit1Code":"LO47","vcaaUnit2Code":"LO47","vcaaUnit34Code":"LO47","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Korean Second Language "},{"id":26511,"code":"KO","year":2023,"name":"Languages: Korean First Language","type":"V","vcaaUnit1Code":"LO37","vcaaUnit2Code":"LO37","vcaaUnit34Code":"LO37","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Korean First Language "},{"id":26510,"code":"KH","year":2023,"name":"Languages: Khmer","type":"V","vcaaUnit1Code":"LO16","vcaaUnit2Code":"LO16","vcaaUnit34Code":"LO16","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Khmer "},{"id":26509,"code":"JS","year":2023,"name":"Languages: Japanese Second Language","type":"V","vcaaUnit1Code":"LO46","vcaaUnit2Code":"LO46","vcaaUnit34Code":"LO46","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Japanese Second Language "},{"id":26508,"code":"JA","year":2023,"name":"Languages: Japanese First Language","type":"V","vcaaUnit1Code":"LO15","vcaaUnit2Code":"LO15","vcaaUnit34Code":"LO15","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Japanese First Language "},{"id":26507,"code":"IX","year":2023,"name":"Languages: Indonesian Second Lang.","type":"V","vcaaUnit1Code":"LO40","vcaaUnit2Code":"LO40","vcaaUnit34Code":"LO40","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Indonesian Second Lang. "},{"id":25881,"code":"**","year":2023,"name":"Any VCE Subjects","type":"V","vcaaUnit1Code":"Y","vcaaUnit2Code":"Y","vcaaUnit34Code":"Y","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":null,"unitName":"Any VCE Subjects "},{"id":26505,"code":"IT02","year":2023,"name":"Applied Computing: Data Analytics","type":"V","vcaaUnit1Code":null,"vcaaUnit2Code":null,"vcaaUnit34Code":"IT02","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Applied Computing: Data Analytics (Unit 3 & 4)"},{"id":26483,"code":"IN","year":2023,"name":"Languages: Indonesian First Language","type":"V","vcaaUnit1Code":"LO13","vcaaUnit2Code":"LO13","vcaaUnit34Code":"LO13","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Indonesian First Language "},{"id":26482,"code":"IL","year":2023,"name":"Languages: Italian","type":"V","vcaaUnit1Code":"LO14","vcaaUnit2Code":"LO14","vcaaUnit34Code":"LO14","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Italian "},{"id":26479,"code":"IE","year":2023,"name":"Industry And Enterprise","type":"V","vcaaUnit1Code":"IE01","vcaaUnit2Code":"IE02","vcaaUnit34Code":"IE03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Industry And Enterprise "},{"id":26478,"code":"HU","year":2023,"name":"Languages: Hungarian","type":"V","vcaaUnit1Code":"LO12","vcaaUnit2Code":"LO12","vcaaUnit34Code":"LO12","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Hungarian "},{"id":26441,"code":"HI","year":2023,"name":"Languages: Hindi","type":"V","vcaaUnit1Code":"LO36","vcaaUnit2Code":"LO36","vcaaUnit34Code":"LO36","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Hindi "},{"id":26440,"code":"HH","year":2023,"name":"Health And Human Development","type":"V","vcaaUnit1Code":"HH01","vcaaUnit2Code":"HH02","vcaaUnit34Code":"HH03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Health And Human Development "},{"id":26439,"code":"HB","year":2023,"name":"Languages: Hebrew","type":"V","vcaaUnit1Code":"LO11","vcaaUnit2Code":"LO11","vcaaUnit34Code":"LO11","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: Hebrew "},{"id":26438,"code":"HA","year":2023,"name":"History: Australian History","type":"V","vcaaUnit1Code":null,"vcaaUnit2Code":null,"vcaaUnit34Code":"HI08","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"History: Australian History (Unit 3 & 4)"},{"id":26436,"code":"GN","year":2023,"name":"Languages: German","type":"V","vcaaUnit1Code":"LO10","vcaaUnit2Code":"LO10","vcaaUnit34Code":"LO10","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Languages: German "},{"id":26435,"code":"GE","year":2023,"name":"Geography","type":"V","vcaaUnit1Code":"GE01","vcaaUnit2Code":"GE02","vcaaUnit34Code":"GE03","applyAdditionToPrereq":false,"dateModified":1679975564000,"isGroup":false,"includeInPrereqExplorer":false,"programType":"V","unitName":"Geography "}]');
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://delta.vtac.edu.au/coursesearchtools/scripts/mustache/mustache.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://delta.vtac.edu.au/coursesearchtools/scripts/convtool.js"></script>
+    <script id="accordingTmp" type="x-tmpl-mustache">
+        {{#data}}
+        <h4 class="ui-accordion-header ui-state-default ui-accordion-icons ui-accordion-header-active ui-corner-top" role="tab" id="ui-id-2" aria-controls="ui-id-3" aria-selected="true" aria-expanded="true" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-s"></span>{{label}}</h4>
+            <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" id="ui-id-3" aria-labelledby="ui-id-2" role="tabpanel" aria-hidden="false" style="display: block;">
+                <p style="font-weight: bold;color: red;">{{disclaimer}}</p>
+                <ul>
+                    {{#issubjects}}
+                        <li>{{.}}</li>
+                    {{/issubjects}}
+                   </ul>
+            </div>
+        </h4>
+        {{/data}}
+    </script>
+    <script>
+        var stateCollapse = document.getElementById('showState')
+        var bsCollapse = new bootstrap.Collapse(stateCollapse, {
+            toggle: false
+        })
+        document.getElementById('addsubject').keyup = function (event) {
+        //event.preventDefault();      
+        if (event.keyCode === 13) {
+            bCollapse.show();
+        }
+        };
+        var convCollapse = document.getElementById('showConversion') 
+        var bs2Collapse = new bootstrap.Collapse(convCollapse, {
+            toggle: false
+        })
+        var convContainerCollapse = document.getElementById('showConversionContainer') 
+        var bs3Collapse = new bootstrap.Collapse(convContainerCollapse, {
+            toggle: false
+        })
+        document.getElementById('showState').onchange = function(){
+            bs2Collapse.show();
+            bs3Collapse.show();
+        };
+    </script>
+</body>
+
+</html>

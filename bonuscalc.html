@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&amp;family=Inter:wght@400;500;700&amp;family=Montserrat:wght@700&amp;display=swap"
+        rel="stylesheet" />
+    <!--[if lt IE 9]>
+	<script src="js/html5shiv/html5shiv.js"></script>
+<![endif]-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="cleartype" content="on">
+    <title>VTAC: Victorian Tertiary Admissions Centre</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">    
+    <link href="https://www.vtac.edu.au/templates/secondary/css/custom.css" rel="stylesheet" />
+     <script>
+        var dataLayer = window.dataLayer = window.dataLayer || [];
+    </script>
+    <style>
+        .ui-widget {
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-NFK5FF" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NFK5FF');</script>
+    <!-- End Google Tag Manager -->
+    <!-- header page -->
+    <nav class="masthead navbar navbar-expand-lg sticky-top navbar-light py-0 my-0 container-fluid">
+        <div class="vtac-circles"> <img class="circle-white"
+                src="https://www.vtac.edu.au/templates/primary5/images/circle-white.png" alt="circle white"> <a
+                class="navbar-brand" href="/"> <img src="https://www.vtac.edu.au/files/images/logo.png" alt="VTAC logo"
+                    class="logo"> </a> </div>
+    </nav>
+    <!-- #mainmenu -->
+    <!-- header page -->
+    <article id="main" class="main-form container-fluid mt-2 mb-5" style="min-height:500px;">
+        <section class="contentbody container">
+            <h1 class="pt-3">Estimate your course selection rank</h1>
+            <p>Subject adjustment points are expressed as aggregate points and are applied to the aggregate, not ATAR.
+                Use the adjustment tool below to estimate your course selection rank.</p>
+            <div id="searchcontainer">
+                <div id="refine">
+                    <form id="searchguide">
+                        <input type="hidden" id="ap" value="1">
+                        <input type="hidden" id="currentYear" value="2015">
+                        <h3>Subject adjustment Tool</h3>
+                        <p>To estimate your course selection rank, select your estimated ATAR range then enter the
+                            number of adjustment points you think you are eligible for.</p>
+                        <div class="row">
+                            <div class="col-md-4 col-12">
+                                <label for="range" class="form-label">Select your ATAR range</label>
+                                <select id="atarRange" name="atarRange" class="form-control w-75">
+                                    <option value="">Select</option>
+                                    <option value="30.00 - 30.95">30.00 - 30.95</option>
+                                    <option value="31.00 - 31.95">31.00 - 31.95</option>
+                                    <option value="32.00 - 32.95">32.00 - 32.95</option>
+                                    <option value="33.00 - 33.95">33.00 - 33.95</option>
+                                    <option value="34.00 - 34.95">34.00 - 34.95</option>
+                                    <option value="35.00 - 35.95">35.00 - 35.95</option>
+                                    <option value="36.00 - 36.95">36.00 - 36.95</option>
+                                    <option value="37.00 - 37.95">37.00 - 37.95</option>
+                                    <option value="38.00 - 38.95">38.00 - 38.95</option>
+                                    <option value="39.00 - 39.95">39.00 - 39.95</option>
+                                    <option value="40.00 - 40.95">40.00 - 40.95</option>
+                                    <option value="41.00 - 41.95">41.00 - 41.95</option>
+                                    <option value="42.00 - 42.95">42.00 - 42.95</option>
+                                    <option value="43.00 - 43.95">43.00 - 43.95</option>
+                                    <option value="44.00 - 44.95">44.00 - 44.95</option>
+                                    <option value="45.00 - 45.95">45.00 - 45.95</option>
+                                    <option value="46.00 - 46.95">46.00 - 46.95</option>
+                                    <option value="47.00 - 47.95">47.00 - 47.95</option>
+                                    <option value="48.00 - 48.95">48.00 - 48.95</option>
+                                    <option value="49.00 - 49.95">49.00 - 49.95</option>
+                                    <option value="50.00 - 50.95">50.00 - 50.95</option>
+                                    <option value="51.00 - 51.95">51.00 - 51.95</option>
+                                    <option value="52.00 - 52.95">52.00 - 52.95</option>
+                                    <option value="53.00 - 53.95">53.00 - 53.95</option>
+                                    <option value="54.00 - 54.95">54.00 - 54.95</option>
+                                    <option value="55.00 - 55.95">55.00 - 55.95</option>
+                                    <option value="56.00 - 56.95">56.00 - 56.95</option>
+                                    <option value="57.00 - 57.95">57.00 - 57.95</option>
+                                    <option value="58.00 - 58.95">58.00 - 58.95</option>
+                                    <option value="59.00 - 59.95">59.00 - 59.95</option>
+                                    <option value="60.00 - 60.95">60.00 - 60.95</option>
+                                    <option value="61.00 - 61.95">61.00 - 61.95</option>
+                                    <option value="62.00 - 62.95">62.00 - 62.95</option>
+                                    <option value="63.00 - 63.95">63.00 - 63.95</option>
+                                    <option value="64.00 - 64.95">64.00 - 64.95</option>
+                                    <option value="65.00 - 65.95">65.00 - 65.95</option>
+                                    <option value="66.00 - 66.95">66.00 - 66.95</option>
+                                    <option value="67.00 - 67.95">67.00 - 67.95</option>
+                                    <option value="68.00 - 68.95">68.00 - 68.95</option>
+                                    <option value="69.00 - 69.95">69.00 - 69.95</option>
+                                    <option value="70.00 - 70.95">70.00 - 70.95</option>
+                                    <option value="71.00 - 71.95">71.00 - 71.95</option>
+                                    <option value="72.00 - 72.95">72.00 - 72.95</option>
+                                    <option value="73.00 - 73.95">73.00 - 73.95</option>
+                                    <option value="74.00 - 74.95">74.00 - 74.95</option>
+                                    <option value="75.00 - 75.95">75.00 - 75.95</option>
+                                    <option value="76.00 - 76.95">76.00 - 76.95</option>
+                                    <option value="77.00 - 77.95">77.00 - 77.95</option>
+                                    <option value="78.00 - 78.95">78.00 - 78.95</option>
+                                    <option value="79.00 - 79.95">79.00 - 79.95</option>
+                                    <option value="80.00 - 80.95">80.00 - 80.95</option>
+                                    <option value="81.00 - 81.95">81.00 - 81.95</option>
+                                    <option value="82.00 - 82.95">82.00 - 82.95</option>
+                                    <option value="83.00 - 83.95">83.00 - 83.95</option>
+                                    <option value="84.00 - 84.95">84.00 - 84.95</option>
+                                    <option value="85.00 - 85.95">85.00 - 85.95</option>
+                                    <option value="86.00 - 86.95">86.00 - 86.95</option>
+                                    <option value="87.00 - 87.95">87.00 - 87.95</option>
+                                    <option value="88.00 - 88.95">88.00 - 88.95</option>
+                                    <option value="89.00 - 89.95">89.00 - 89.95</option>
+                                    <option value="90.00 - 90.95">90.00 - 90.95</option>
+                                    <option value="91.00 - 91.95">91.00 - 91.95</option>
+                                    <option value="92.00 - 92.95">92.00 - 92.95</option>
+                                    <option value="93.00 - 93.95">93.00 - 93.95</option>
+                                    <option value="94.00 - 94.95">94.00 - 94.95</option>
+                                    <option value="95.00 - 95.95">95.00 - 95.95</option>
+                                    <option value="96.00 - 96.95">96.00 - 96.95</option>
+                                    <option value="97.00 - 97.95">97.00 - 97.95</option>
+                                    <option value="98.00 - 98.95">98.00 - 98.95</option>
+                                    <option value="99.00 - 99.95">99.00 - 99.95</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-12">
+                                <label for="bonus" class="form-label">Adjustment points</label>
+                                <input id="bonus" type="text" value="" placeholder="" class="form-control w-25">
+                            </div>
+                            <div class="col-md-4 col-12">
+                                <label for="range" class="form-label d-block">Course selection rank range</label>
+                                <input id="range" type="text" disabled="disabled" class="match_equiv rank_range" placeholder="" class="form-control d-block">
+                            </div>
+                        </div>
+                            <input id="clear" type="button" value="Clear" class="btn btn-dark text-white mt-3">
+                        <h4>Estimate should be used as a guide only. </h4>
+                        <p> Some institutions also award adjustment points in recognition of circumstances of
+                            disadvantage or rural and regional location that may have affected your education. </p>
+                        <p> It is important to note that adjustment points do not change your actual ATAR and are only
+                            relevant during the selection process. </p>
+                    </form>
+                    <div style="clear:both;"></div>
+                </div>
+            </div>
+        </section>
+    </article>
+    <!--Footer-->
+    <footer class="mt-5 page-footer text-center font-small" id="bottom">
+        <!--Section: fat footer-->
+        <section class="fat-footer">
+            <div class="row me-0">
+                <div class="col-md-4 col-sm-12 text-sm-start ps-5 pt-2 mt-4">
+                    <p>&copy; Victorian Tertiary Admissions Centre (VTAC) 2023</p>
+                    <!-- Social icons -->
+                    <div class="pb-4 connect"> <a href="https://www.facebook.com/vtacguide"><img
+                                src="https://www.vtac.edu.au/files/images/icons/logo-facebook.png" alt="facebook"></a>
+                        <a href="https://www.instagram.com/vtacguide/"><img
+                                src="https://www.vtac.edu.au/files/images/icons/logo-instagram.png" alt="instagram"></a>
+                        <a href="https://twitter.com/vtacguide"><img
+                                src="https://www.vtac.edu.au/files/images/icons/logo-twitter.png" alt="twitter"></a> <a
+                            href="https://www.youtube.com/user/vtacmedia"><img
+                                src="https://www.vtac.edu.au/files/images/icons/logo-youtube.png" alt="youtube"></a>
+                    </div>
+                    <!-- Social icons -->
+                    <p class="d-md-inline" style="position: relative; z-index: 2;"> <a class="pe-5"
+                            href="/copyright/">Copyright</a> <a class="pe-5" href="/privacy/">Privacy</a> <a
+                            href="/legals/">Legals</a> </p>
+                    <p class="mt-3">40 Park Street <br>
+                        South Melbourne VIC 3205 <br>
+                        AUSTRALIA </p>
+                    <p>Phone: <a class="d-inline" href="tel:+61399261020">+613
+                            9926 1020</a> <br>
+                        <small>9:30am-5pm Melbourne time, Mon-Fri</small>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!--/.Footer-->
+    <!-- #sitemap -->
+    <div class="mobileIndicator"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+
+</html>
