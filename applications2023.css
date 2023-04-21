@@ -696,13 +696,17 @@ font-weight:700
 }
 
 input[type="button"].arrowup,input[type="button"].arrowdown {
-background-color:#bdbbb3;
+background-color:#c4d2d9;
 border:1px solid #666;
-color:#000
+color:#373534;
+padding: 4px 16px;
+margin-left:1px;
 }
 
 input[type="button"].cross {
-border:2px solid #900
+border:2px solid #900;
+padding: 4px 18px;
+margin-left:1px;
 }
 
 ::-webkit-input-placeholder {
@@ -1476,7 +1480,8 @@ border-top:5px solid #eee
 }
 
 ul.circles-list > li a {
-font:12px 'Poppins', Arial,Helvetica,sans-serif;
+font: 12px 'Poppins',Arial,Helvetica,sans-serif;
+line-height: 1;
 text-transform:initial;
 text-decoration:none;
 color:#888
