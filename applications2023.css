@@ -137,7 +137,7 @@ border-radius:50%
 }
 
 #summary {
-background:#2a5f91 url(../images/bg_summary.png) repeat-x center top;
+background:#1565C0 url(../images/bg_summary.png) repeat-x center top;
 margin:0;
 padding:0
 }
@@ -170,7 +170,7 @@ margin:0 auto;
 padding:0 0 60px;
 height:100%;
 clear:both;
-background-color:#f2f2f2
+background-color:#fafafa;
 }
 
 #mainnav {
@@ -355,7 +355,7 @@ margin-bottom:10px
 
 h2 {
 padding:12px 0 18px 10px;
-color:#6b0000
+color:#002f6c;
 }
 
 h3 {
@@ -363,7 +363,7 @@ color:#24709e
 }
 
 h4 {
-color:#808622
+color:#14868C
 }
 
 h5 {
@@ -1313,7 +1313,11 @@ margin:0;
 padding:17px 0 0 170px;
 font-family:"Inter",sans-serif;
 font-size:34px;
-color:#777
+color:#777;
+text-transform:lowercase;
+}
+h2::first-letter {
+    text-transform:uppercase;
 }
 
 .appname strong {
@@ -1535,7 +1539,7 @@ content:"\2713"
 
 h2 {
 font-size:28px;
-text-transform:uppercase
+text-transform:lowercase
 }
 h2::first-letter {
 text-transform: capitalize;
@@ -1788,7 +1792,7 @@ section#accountsummary p:first-of-type {
 margin:15px 10px 0 0;
 padding:15px 10px 18px 15px;
 color:#fff;
-background:#2c3e50 url(../images/bg_id.png) no-repeat bottom left;
+background:#002f6c url(../images/bg_id.png) no-repeat bottom left;
 background-size:30px 75px
 }
 
@@ -1936,7 +1940,7 @@ text-indent:0
 
 h2 {
 font-size:28px;
-text-transform:uppercase
+text-transform:lowercase
 }
 h2::first-letter {
 text-transform: capitalize;
@@ -2539,7 +2543,7 @@ text-decoration:none
 
 h2 {
 font-size:20px;
-text-transform:uppercase
+text-transform:lowercase
 }
 h2::first-letter {
 text-transform: capitalize;
@@ -2905,7 +2909,7 @@ text-decoration:none
 
 h2 {
 font-size:18px;
-text-transform:uppercase
+text-transform:lowercase
 }
 h2::first-letter {
 text-transform: capitalize;
@@ -3265,7 +3269,7 @@ text-decoration:none
 
 h2 {
 font-size:18px;
-text-transform:uppercase
+text-transform:lowercase
 }
 h2::first-letter {
 text-transform: capitalize;
@@ -3596,7 +3600,7 @@ text-decoration:none
 
 h2 {
 font-size:17px;
-text-transform:uppercase
+text-transform:lowercase
 }
 h2::first-letter {
 text-transform: capitalize;
