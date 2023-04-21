@@ -50,7 +50,7 @@ padding:0;
 background-color:#fafafa;
 color:#333;
 font-family:"Inter",sans-serif;
-font-size:14px;
+font-size:16px;
 line-height:1.3;
 position:relative;
 min-height:100%;
@@ -137,7 +137,7 @@ border-radius:50%
 }
 
 #summary {
-background:#1565C0 url(../images/bg_summary.png) repeat-x center top;
+background:#F0F3F9 url(../images/bg_summary.png) repeat-x center top;
 margin:0;
 padding:0
 }
@@ -592,7 +592,7 @@ height:100px
 
 input[type="submit"],input[type="button"],div.buttonsWrapper div button,button,input.butn {
 margin:6px 0;
-padding:10px 18px;
+padding:10px 24px;
 border:1px solid #0178bd;
 color:#fff;
 display:inline-block;
@@ -602,13 +602,14 @@ background:#0178bd;
 background-size:20px 20px;
 text-decoration:none;
 text-transform:uppercase;
-text-align:center
+text-align:center;
+border-radius: 20px;
 }
 
 input.actioncall {
-background-color:#900;
-background:#900;
-border:1px solid #900;
+background-color:#880E4F;
+background:#880E4F;
+border:1px solid #880E4F;
 color:#fff
 }
 
@@ -772,7 +773,7 @@ margin-left:8px
 
 input.cross {
 font-weight:700;
-text-transform:lowercase
+text-transform:initial
 }
 
 .less.active .button-read-more {
@@ -1316,7 +1317,7 @@ font-size:34px;
 color:#777;
 text-transform:lowercase;
 }
-h2::first-letter {
+.appname::first-letter {
     text-transform:uppercase;
 }
 
@@ -1446,7 +1447,7 @@ line-height:.8em
 }
 
 ul.circles-list > li.inactive,ul.circles-list > li.active,ul.circles-list > li.completed,li.previous {
-border-top:5px solid #ccc
+border-top:5px solid #eee
 }
 
 ul.circles-list > li.firstcompleted,ul.circles-list > li.firstactive,ul.circles-list > li.lastactive,ul.circles-list > li.lastinactive {
@@ -1460,7 +1461,7 @@ width:50%;
 right:50%;
 top:0;
 z-index:1;
-border-top:5px solid #ccc
+border-top:5px solid #eee
 }
 
 ul.circles-list > li.firstcompleted:after,ul.circles-list > li.firstactive:after {
@@ -1470,7 +1471,7 @@ width:50%;
 left:50%;
 top:0;
 z-index:1;
-border-top:5px solid #ccc
+border-top:5px solid #eee
 }
 
 ul.circles-list > li a {
@@ -1508,7 +1509,7 @@ top:-22px
 }
 
 ul.circles-list > li.lastactive:before {
-background-color:#355262;
+background-color:#0D47A1;
 top:-22px
 }
 
@@ -1518,13 +1519,13 @@ top:-22px
 }
 
 ul.circles-list > li.firstactive:before {
-background-color:#355262;
+background-color:#0D47A1;
 top:-22px
 }
 
 ul.circles-list > li.active:before {
 top:-27px;
-background-color:#355262
+background-color:#0D47A1
 }
 
 ul.circles-list > li.completed:before,ul.circles-list > li.previous:before {
@@ -1539,7 +1540,7 @@ content:"\2713"
 
 h2 {
 font-size:28px;
-text-transform:lowercase
+text-transform:initial
 }
 h2::first-letter {
 text-transform: capitalize;
@@ -1658,7 +1659,7 @@ line-height:.8em
 }
 
 ul.circles-list > li.inactive,ul.circles-list > li.active,ul.circles-list > li.completed,li.previous {
-border-top:5px solid #ccc
+border-top:5px solid #eee
 }
 
 ul.circles-list > li.firstcompleted,ul.circles-list > li.firstactive,ul.circles-list > li.lastactive,ul.circles-list > li.lastinactive {
@@ -1672,7 +1673,7 @@ width:50%;
 right:50%;
 top:0;
 z-index:1;
-border-top:5px solid #ccc
+border-top:5px solid #eee
 }
 
 ul.circles-list > li.firstcompleted:after,ul.circles-list > li.firstactive:after {
@@ -1682,7 +1683,7 @@ width:50%;
 left:50%;
 top:0;
 z-index:1;
-border-top:5px solid #ccc
+border-top:5px solid #eee
 }
 
 ul.circles-list > li a {
@@ -1720,7 +1721,7 @@ top:-22px
 }
 
 ul.circles-list > li.lastactive:before {
-background-color:#355262;
+background-color:#0D47A1;
 top:-22px
 }
 
@@ -1730,13 +1731,13 @@ top:-22px
 }
 
 ul.circles-list > li.firstactive:before {
-background-color:#355262;
+background-color:#0D47A1;
 top:-22px
 }
 
 ul.circles-list > li.active:before {
 top:-27px;
-background-color:#355262
+background-color:#0D47A1
 }
 
 ul.circles-list > li.completed:before,ul.circles-list > li.previous:before {
@@ -1940,7 +1941,7 @@ text-indent:0
 
 h2 {
 font-size:28px;
-text-transform:lowercase
+text-transform:initial
 }
 h2::first-letter {
 text-transform: capitalize;
@@ -2543,7 +2544,7 @@ text-decoration:none
 
 h2 {
 font-size:20px;
-text-transform:lowercase
+text-transform:initial
 }
 h2::first-letter {
 text-transform: capitalize;
@@ -2605,7 +2606,7 @@ line-height:.8em
 }
 
 ul.circles-list > li.inactive,ul.circles-list > li.active,ul.circles-list > li.completed,li.previous {
-border-top:5px solid #ccc
+border-top:5px solid #eee
 }
 
 ul.circles-list > li.firstcompleted,ul.circles-list > li.firstactive,ul.circles-list > li.lastactive,ul.circles-list > li.lastinactive {
@@ -2619,7 +2620,7 @@ width:50%;
 right:50%;
 top:0;
 z-index:1;
-border-top:5px solid #ccc
+border-top:5px solid #eee
 }
 
 ul.circles-list > li.firstcompleted:after,ul.circles-list > li.firstactive:after {
@@ -2629,7 +2630,7 @@ width:50%;
 left:50%;
 top:0;
 z-index:1;
-border-top:5px solid #ccc
+border-top:5px solid #eee
 }
 
 ul.circles-list > li a {
@@ -2667,7 +2668,7 @@ top:-17px
 }
 
 ul.circles-list > li.lastactive:before {
-background-color:#355262;
+background-color:#0D47A1;
 top:-17px
 }
 
@@ -2677,13 +2678,13 @@ top:-17px
 }
 
 ul.circles-list > li.firstactive:before {
-background-color:#355262;
+background-color:#0D47A1;
 top:-17px
 }
 
 ul.circles-list > li.active:before {
 top:-22px;
-background-color:#355262
+background-color:#0D47A1
 }
 
 ul.circles-list > li.completed:before,ul.circles-list > li.previous:before {
@@ -2909,7 +2910,7 @@ text-decoration:none
 
 h2 {
 font-size:18px;
-text-transform:lowercase
+text-transform:initial
 }
 h2::first-letter {
 text-transform: capitalize;
@@ -2975,7 +2976,7 @@ line-height:.8em
 }
 
 ul.circles-list > li.inactive,ul.circles-list > li.active,ul.circles-list > li.completed,ul.circles-list > li.previous {
-border-top:5px solid #ccc
+border-top:5px solid #eee
 }
 
 ul.circles-list > li.lastinactive:after,ul.circles-list > li.lastactive:after {
@@ -2985,7 +2986,7 @@ width:50%;
 right:50%;
 top:0;
 z-index:1;
-border-top:5px solid #ccc
+border-top:5px solid #eee
 }
 
 ul.circles-list > li.firstcompleted:after,ul.circles-list > li.firstactive:after {
@@ -2995,7 +2996,7 @@ width:50%;
 left:50%;
 top:0;
 z-index:1;
-border-top:5px solid #ccc
+border-top:5px solid #eee
 }
 
 ul.circles-list > li a {
@@ -3030,7 +3031,7 @@ top:-17px
 }
 
 ul.circles-list > li.lastactive:before {
-background-color:#355262;
+background-color:#0D47A1;
 top:-17px
 }
 
@@ -3040,13 +3041,13 @@ top:-17px
 }
 
 ul.circles-list > li.firstactive:before {
-background-color:#355262;
+background-color:#0D47A1;
 top:-17px
 }
 
 ul.circles-list > li.active:before {
 top:-22px;
-background-color:#355262
+background-color:#0D47A1
 }
 
 ul.circles-list > li.completed:before,ul.circles-list > li.previous:before {
@@ -3269,7 +3270,7 @@ text-decoration:none
 
 h2 {
 font-size:18px;
-text-transform:lowercase
+text-transform:initial
 }
 h2::first-letter {
 text-transform: capitalize;
@@ -3335,7 +3336,7 @@ line-height:.8em
 }
 
 ul.circles-list > li.inactive,ul.circles-list > li.active,ul.circles-list > li.completed,ul.circles-list > li.previous {
-border-top:5px solid #ccc
+border-top:5px solid #eee
 }
 
 ul.circles-list > li.lastinactive:after,ul.circles-list > li.lastactive:after {
@@ -3345,7 +3346,7 @@ width:50%;
 right:50%;
 top:0;
 z-index:1;
-border-top:5px solid #ccc
+border-top:5px solid #eee
 }
 
 ul.circles-list > li.firstcompleted:after,ul.circles-list > li.firstactive:after {
@@ -3355,7 +3356,7 @@ width:50%;
 left:50%;
 top:0;
 z-index:1;
-border-top:5px solid #ccc
+border-top:5px solid #eee
 }
 
 ul.circles-list > li a {
@@ -3390,7 +3391,7 @@ top:-17px
 }
 
 ul.circles-list > li.lastactive:before {
-background-color:#355262;
+background-color:#0D47A1;
 top:-17px
 }
 
@@ -3400,13 +3401,13 @@ top:-17px
 }
 
 ul.circles-list > li.firstactive:before {
-background-color:#355262;
+background-color:#0D47A1;
 top:-17px
 }
 
 ul.circles-list > li.active:before {
 top:-22px;
-background-color:#355262
+background-color:#0D47A1
 }
 
 ul.circles-list > li.completed:before,ul.circles-list > li.previous:before {
@@ -3600,7 +3601,7 @@ text-decoration:none
 
 h2 {
 font-size:17px;
-text-transform:lowercase
+text-transform:initial
 }
 h2::first-letter {
 text-transform: capitalize;
@@ -3666,7 +3667,7 @@ line-height:.8em
 }
 
 ul.circles-list > li.inactive,ul.circles-list > li.active,ul.circles-list > li.completed,ul.circles-list > li.previous {
-border-top:5px solid #ccc
+border-top:5px solid #eee
 }
 
 ul.circles-list > li.lastinactive:after,ul.circles-list > li.lastactive:after {
@@ -3676,7 +3677,7 @@ width:50%;
 right:50%;
 top:0;
 z-index:1;
-border-top:5px solid #ccc
+border-top:5px solid #eee
 }
 
 ul.circles-list > li.firstcompleted:after,ul.circles-list > li.firstactive:after {
@@ -3686,7 +3687,7 @@ width:50%;
 left:50%;
 top:0;
 z-index:1;
-border-top:5px solid #ccc
+border-top:5px solid #eee
 }
 
 ul.circles-list > li a {
@@ -3721,7 +3722,7 @@ top:-17px
 }
 
 ul.circles-list > li.lastactive:before {
-background-color:#355262;
+background-color:#0D47A1;
 top:-17px
 }
 
@@ -3731,13 +3732,13 @@ top:-17px
 }
 
 ul.circles-list > li.firstactive:before {
-background-color:#355262;
+background-color:#0D47A1;
 top:-17px
 }
 
 ul.circles-list > li.active:before {
 top:-22px;
-background-color:#355262
+background-color:#0D47A1
 }
 
 ul.circles-list > li.completed:before,ul.circles-list > li.previous:before {
