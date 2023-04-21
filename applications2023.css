@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Inter:400,700,400italic";
+@import "https://fonts.googleapis.com/css?family=Poppins:400,700,400italic";
 
 html {
 box-sizing:border-box
@@ -49,7 +49,7 @@ margin:0;
 padding:0;
 background-color:#fafafa;
 color:#333;
-font-family:"Inter",sans-serif;
+font-family:"Poppins",sans-serif;
 font-size:16px;
 line-height:1.3;
 position:relative;
@@ -97,7 +97,7 @@ background-color:#3498db
 .topbutn a,.topbutn_account a {
 text-transform:uppercase;
 text-decoration:none;
-font:12px "Inter",sans-serif;
+font:12px "Poppins",sans-serif;
 color:#fff;
 margin:0;
 padding:6px;
@@ -137,7 +137,7 @@ border-radius:50%
 }
 
 #summary {
-background:#F0F3F9 url(../images/bg_summary.png) repeat-x center top;
+background:#F0F3F9 url(https://delta.vtac.edu.au/CourseApp//images/bg_id.png) repeat-x center top;
 margin:0;
 padding:0
 }
@@ -348,7 +348,7 @@ padding:0
 }
 
 h1 {
-font-family:"Inter",sans-serif;
+font-family:"Poppins",sans-serif;
 font-size:2em;
 margin-bottom:10px
 }
@@ -371,7 +371,7 @@ color:#60707a
 }
 
 h3,h4,h5 {
-font-family:"Inter",sans-serif;
+font-family:"Poppins",sans-serif;
 font-weight:700;
 text-align:left;
 padding:18px 0 14px 10px
@@ -540,7 +540,8 @@ border:1px solid #bebebe;
 padding:0 7px;
 margin:1px 0 6px;
 outline:none;
-font-family:"Inter",sans-serif
+font-family:"Poppins",sans-serif;
+border-radius: 3px;
 }
 
 select {
@@ -592,11 +593,11 @@ height:100px
 
 input[type="submit"],input[type="button"],div.buttonsWrapper div button,button,input.butn {
 margin:6px 0;
-padding:10px 24px;
+padding:6px 24px;
 border:1px solid #0178bd;
 color:#fff;
 display:inline-block;
-font:bold 16px "Inter",sans-serif;
+font:bold 16px "Poppins",sans-serif;
 background-color:#0178bd;
 background:#0178bd;
 background-size:20px 20px;
@@ -676,7 +677,7 @@ text-transform:none;
 -moz-border-radius:5px 5px 5px 5px;
 -webkit-border-radius:5px 5px 5px 5px;
 border-radius:5px 5px 5px 5px;
-cursor:pointer
+cursor:poPoppins
 }
 
 input[type="checkbox"].tc-butn-mobile + label {
@@ -705,25 +706,25 @@ border:2px solid #900
 }
 
 ::-webkit-input-placeholder {
-font:normal 14px "Inter",sans-serif;
+font:normal 14px "Poppins",sans-serif;
 font-style:italic;
 line-height:inherit
 }
 
 :-moz-placeholder {
-font:normal 14px "Inter",sans-serif;
+font:normal 14px "Poppins",sans-serif;
 font-style:italic;
 line-height:40px
 }
 
 ::-moz-placeholder {
-font:normal 14px "Inter",sans-serif;
+font:normal 14px "Poppins",sans-serif;
 font-style:italic;
 line-height:40px
 }
 
 :-ms-input-placeholder {
-font:normal 14px "Inter",sans-serif;
+font:normal 14px "Poppins",sans-serif;
 font-style:italic;
 line-height:normal
 }
@@ -988,7 +989,7 @@ margin:0
 
 table.grey tr th,table.grey tbody tr th {
 font-weight:700;
-font-family:"Inter",sans-serif;
+font-family:"Poppins",sans-serif;
 color:#000;
 border:1px solid #c1dad7;
 text-align:left;
@@ -1148,7 +1149,7 @@ margin:auto
 a.termscons,a.priv {
 color:#0821b7;
 text-decoration:none;
-cursor:pointer
+cursor:poPoppins
 }
 
 div.breakout {
@@ -1191,7 +1192,7 @@ border-radius:0 0 0 0;
 }
 
 .ui-widget {
-font-family:"Inter",sans-serif
+font-family:"Poppins",sans-serif
 }
 
 .ui-widget-header {
@@ -1242,7 +1243,7 @@ text-decoration:none
 }
 
 .ui-widget button {
-font-family:"Inter",sans-serif
+font-family:"Poppins",sans-serif
 }
 
 .floaticon {
@@ -1312,7 +1313,7 @@ height:60px
 display:inline-block;
 margin:0;
 padding:17px 0 0 170px;
-font-family:"Inter",sans-serif;
+font-family:"Poppins",sans-serif;
 font-size:34px;
 color:#777;
 text-transform:lowercase;
@@ -1476,9 +1477,9 @@ border-top:5px solid #eee
 
 ul.circles-list > li a {
 font:12px Arial,Helvetica,sans-serif;
-text-transform:uppercase;
+text-transform:initial;
 text-decoration:none;
-color:#000
+color:#888
 }
 
 ul.circles-list > li:before {
@@ -1499,12 +1500,12 @@ z-index:2
 }
 
 ul.circles-list > li.inactive:before {
-background-color:#c9cacc;
+background-color:#ddd;
 top:-27px
 }
 
 ul.circles-list > li.lastinactive:before {
-background-color:#c9cacc;
+background-color:#ddd;
 top:-22px
 }
 
@@ -1514,7 +1515,7 @@ top:-22px
 }
 
 ul.circles-list > li.firstcompleted:before {
-background-color:#c9cacc;
+background-color:#ddd;
 top:-22px
 }
 
@@ -1533,8 +1534,8 @@ top:-27px
 }
 
 ul.circles-list > li.completed:before,ul.circles-list > li.firstcompleted:before,ul.circles-list > li.previous:before {
-background-color:#c3cc33;
-cursor:pointer;
+background-color:#00ACC1;
+cursor:poPoppins;
 content:"\2713"
 }
 
@@ -1611,7 +1612,7 @@ background-color:transparent
 display:inline-block;
 margin:0;
 padding:17px 0 0 170px;
-font-family:"Inter",sans-serif;
+font-family:"Poppins",sans-serif;
 font-size:34px;
 color:#777
 }
@@ -1711,12 +1712,12 @@ z-index:2
 }
 
 ul.circles-list > li.inactive:before {
-background-color:#c9cacc;
+background-color:#ddd;
 top:-27px
 }
 
 ul.circles-list > li.lastinactive:before {
-background-color:#c9cacc;
+background-color:#ddd;
 top:-22px
 }
 
@@ -1726,7 +1727,7 @@ top:-22px
 }
 
 ul.circles-list > li.firstcompleted:before {
-background-color:#c9cacc;
+background-color:#ddd;
 top:-22px
 }
 
@@ -1745,8 +1746,8 @@ top:-27px
 }
 
 ul.circles-list > li.completed:before,ul.circles-list > li.firstcompleted:before,ul.circles-list > li.previous:before {
-background-color:#c3cc33;
-cursor:pointer;
+background-color:#00ACC1;
+cursor:poPoppins;
 content:"\2713"
 }
 }
@@ -1792,8 +1793,8 @@ background-color:#009788
 section#accountsummary p:first-of-type {
 margin:15px 10px 0 0;
 padding:15px 10px 18px 15px;
-color:#fff;
-background:#002f6c url(../images/bg_id.png) no-repeat bottom left;
+color:#373534;
+background:#e4e9f5 url(https://delta.vtac.edu.au/CourseApp//images/bg_id.png) no-repeat bottom left;
 background-size:30px 75px
 }
 
@@ -1852,7 +1853,7 @@ height:70px
 
 .catarea h2 {
 line-height:1;
-font-family:"Inter",sans-serif;
+font-family:"Poppins",sans-serif;
 text-decoration:none;
 margin:0;
 padding:6px 0;
@@ -1882,7 +1883,7 @@ white-space:pre
 }
 
 .catarea ul.centred li a {
-font-family:"Inter",sans-serif;
+font-family:"Poppins",sans-serif;
 font-size:14px;
 color:#117db9;
 text-decoration:none
@@ -1996,14 +1997,14 @@ height:30px
 i.icon-help {
 background:url(../images/icon_help.png) no-repeat left top;
 background-size:20px 20px;
-cursor:pointer
+cursor:poPoppins
 }
 
 i.icon-print {
 background:#2a5f91 url(../images/icon_print.png) no-repeat center center;
 background-size:17px 17px;
 padding:5px;
-cursor:pointer;
+cursor:poPoppins;
 -moz-border-radius:5px 5px 5px 5px;
 -webkit-border-radius:5px 5px 5px 5px;
 border-radius:5px 5px 5px 5px
@@ -2235,8 +2236,8 @@ padding:0 0 3px
 section#accountsummary p:first-of-type {
 margin:15px 10px 0 0;
 padding:5px 10px 7px 18px;
-color:#fff;
-background:#2c3e50 url(../images/bg_id.png) no-repeat bottom left;
+color:#373534;
+background:#e4e9f5 url(..https://delta.vtac.edu.au/CourseApp//images/bg_id.png) no-repeat bottom left;
 background-size:30px 75px
 }
 
@@ -2434,7 +2435,7 @@ background-color:transparent
 display:inline-block;
 margin:0;
 padding:17px 0 0 147px;
-font-family:"Inter",sans-serif;
+font-family:"Poppins",sans-serif;
 font-size:31px;
 color:#777
 }
@@ -2506,7 +2507,7 @@ height:70px
 
 .catarea h2 {
 line-height:1;
-font-family:"Inter",sans-serif;
+font-family:"Poppins",sans-serif;
 text-decoration:none;
 margin:0;
 padding:6px 0;
@@ -2536,7 +2537,7 @@ white-space:pre
 }
 
 .catarea ul.centred li a {
-font-family:"Inter",sans-serif;
+font-family:"Poppins",sans-serif;
 font-size:14px;
 color:#117db9;
 text-decoration:none
@@ -2658,12 +2659,12 @@ z-index:2
 }
 
 ul.circles-list > li.inactive:before {
-background-color:#c9cacc;
+background-color:#ddd;
 top:-22px
 }
 
 ul.circles-list > li.lastinactive:before {
-background-color:#c9cacc;
+background-color:#ddd;
 top:-17px
 }
 
@@ -2673,7 +2674,7 @@ top:-17px
 }
 
 ul.circles-list > li.firstcompleted:before {
-background-color:#c9cacc;
+background-color:#ddd;
 top:-17px
 }
 
@@ -2692,8 +2693,8 @@ top:-22px
 }
 
 ul.circles-list > li.completed:before,ul.circles-list > li.firstcompleted:before,ul.circles-list > li.previous:before {
-background-color:#c3cc33;
-cursor:pointer;
+background-color:#00ACC1;
+cursor:poPoppins;
 content:"\2713"
 }
 
@@ -2749,23 +2750,23 @@ width:50%
 
 input[type="submit"],input[type="button"],div.buttonsWrapper div button,button,input.butn {
 padding:8px 16px;
-font:bold 13px "Inter",sans-serif
+font:bold 13px "Poppins",sans-serif
 }
 
 input[type="text"].resizedTextbox {
 width:100px;
 height:30px;
-font:normal 12px "Inter",sans-serif
+font:normal 12px "Poppins",sans-serif
 }
 
 input[type="button"].arrowup,input[type="button"].arrowdown {
 padding:2px 5px;
-font:bold 14px "Inter",sans-serif
+font:bold 14px "Poppins",sans-serif
 }
 
 input[type="button"].cross {
 padding:0 6px 2px;
-font:bold 14px "Inter",sans-serif
+font:bold 14px "Poppins",sans-serif
 }
 
 input[type="checkbox"].fakebutn + label,input[type="button"].tc-butn {
@@ -2795,7 +2796,7 @@ background-color:transparent
 display:inline-block;
 margin:0;
 padding:15px 0 0 110px;
-font-family:"Inter",sans-serif;
+font-family:"Poppins",sans-serif;
 font-size:22px;
 color:#777
 }
@@ -2871,7 +2872,7 @@ height:50px
 
 .catarea h2 {
 line-height:1;
-font-family:"Inter",sans-serif;
+font-family:"Poppins",sans-serif;
 text-decoration:none;
 margin:0;
 padding:6px 0;
@@ -2903,7 +2904,7 @@ white-space:pre
 }
 
 .catarea ul.centred li a {
-font-family:"Inter",sans-serif;
+font-family:"Poppins",sans-serif;
 color:#117db9;
 text-decoration:none
 }
@@ -3021,12 +3022,12 @@ z-index:2
 }
 
 ul.circles-list > li.inactive:before {
-background-color:#c9cacc;
+background-color:#ddd;
 top:-22px
 }
 
 ul.circles-list > li.lastinactive:before {
-background-color:#c9cacc;
+background-color:#ddd;
 top:-17px
 }
 
@@ -3036,7 +3037,7 @@ top:-17px
 }
 
 ul.circles-list > li.firstcompleted:before {
-background-color:#c9cacc;
+background-color:#ddd;
 top:-17px
 }
 
@@ -3055,8 +3056,8 @@ top:-22px
 }
 
 ul.circles-list > li.completed:before,ul.circles-list > li.firstcompleted:before,ul.circles-list > li.previous:before {
-background-color:#c3cc33;
-cursor:pointer;
+background-color:#00ACC1;
+cursor:poPoppins;
 content:"\2713"
 }
 
@@ -3112,23 +3113,23 @@ width:50%
 
 input[type="submit"],input[type="button"],div.buttonsWrapper div button,button,input.butn {
 padding:7px 15px;
-font:bold 12px "Inter",sans-serif
+font:bold 12px "Poppins",sans-serif
 }
 
 input[type="text"].resizedTextbox {
 width:80px;
 height:30px;
-font:normal 12px "Inter",sans-serif
+font:normal 12px "Poppins",sans-serif
 }
 
 input[type="button"].arrowup,input[type="button"].arrowdown {
 padding:2px 4px 3px;
-font:normal 12px "Inter",sans-serif
+font:normal 12px "Poppins",sans-serif
 }
 
 input[type="button"].cross {
 padding:1px 6px 2px;
-font:bold 13px "Inter",sans-serif
+font:bold 13px "Poppins",sans-serif
 }
 
 input[type="checkbox"].fakebutn + label,input[type="button"].tc-butn {
@@ -3155,7 +3156,7 @@ background-color:transparent
 display:inline-block;
 margin:0;
 padding:15px 0 0 98px;
-font-family:"Inter",sans-serif;
+font-family:"Poppins",sans-serif;
 font-size:20px;
 color:#777
 }
@@ -3231,7 +3232,7 @@ height:50px
 
 .catarea h2 {
 line-height:1;
-font-family:"Inter",sans-serif;
+font-family:"Poppins",sans-serif;
 text-decoration:none;
 margin:0;
 padding:6px 0;
@@ -3263,7 +3264,7 @@ white-space:pre
 }
 
 .catarea ul.centred li a {
-font-family:"Inter",sans-serif;
+font-family:"Poppins",sans-serif;
 color:#117db9;
 text-decoration:none
 }
@@ -3381,12 +3382,12 @@ z-index:2
 }
 
 ul.circles-list > li.inactive:before {
-background-color:#c9cacc;
+background-color:#ddd;
 top:-22px
 }
 
 ul.circles-list > li.lastinactive:before {
-background-color:#c9cacc;
+background-color:#ddd;
 top:-17px
 }
 
@@ -3396,7 +3397,7 @@ top:-17px
 }
 
 ul.circles-list > li.firstcompleted:before {
-background-color:#c9cacc;
+background-color:#ddd;
 top:-17px
 }
 
@@ -3415,8 +3416,8 @@ top:-22px
 }
 
 ul.circles-list > li.completed:before,ul.circles-list > li.firstcompleted:before,ul.circles-list > li.previous:before {
-background-color:#c3cc33;
-cursor:pointer;
+background-color:#00ACC1;
+cursor:poPoppins;
 content:"\2713"
 }
 
@@ -3473,23 +3474,23 @@ width:100%
 input[type="submit"],input[type="button"],div.buttonsWrapper div button,button,input.butn {
 margin:6px 2px;
 padding:6px 12px;
-font:bold 12px "Inter",sans-serif
+font:bold 12px "Poppins",sans-serif
 }
 
 input[type="text"].resizedTextbox {
 width:80px;
 height:30px;
-font:normal 12px "Inter",sans-serif
+font:normal 12px "Poppins",sans-serif
 }
 
 input[type="button"].arrowup,input[type="button"].arrowdown {
 padding:1px 4px 3px;
-font:normal 13px "Inter",sans-serif
+font:normal 13px "Poppins",sans-serif
 }
 
 input[type="button"].cross {
 padding:0 6px 2px;
-font:bold 14px "Inter",sans-serif
+font:bold 14px "Poppins",sans-serif
 }
 
 input[type="checkbox"].fakebutn + label,input[type="button"].tc-butn {
@@ -3516,7 +3517,7 @@ background-color:transparent
 display:inline-block;
 margin:0;
 padding:16px 0 0 85px;
-font-family:"Inter",sans-serif;
+font-family:"Poppins",sans-serif;
 font-size:17px;
 color:#777
 }
@@ -3562,7 +3563,7 @@ height:50px
 
 .catarea h2 {
 line-height:1;
-font-family:"Inter",sans-serif;
+font-family:"Poppins",sans-serif;
 text-decoration:none;
 margin:0;
 padding:6px 0;
@@ -3594,7 +3595,7 @@ white-space:pre
 }
 
 .catarea ul.centred li a {
-font-family:"Inter",sans-serif;
+font-family:"Poppins",sans-serif;
 color:#117db9;
 text-decoration:none
 }
@@ -3712,12 +3713,12 @@ z-index:2
 }
 
 ul.circles-list > li.inactive:before {
-background-color:#c9cacc;
+background-color:#ddd;
 top:-22px
 }
 
 ul.circles-list > li.lastinactive:before {
-background-color:#c9cacc;
+background-color:#ddd;
 top:-17px
 }
 
@@ -3727,7 +3728,7 @@ top:-17px
 }
 
 ul.circles-list > li.firstcompleted:before {
-background-color:#c9cacc;
+background-color:#ddd;
 top:-17px
 }
 
@@ -3746,8 +3747,8 @@ top:-22px
 }
 
 ul.circles-list > li.completed:before,ul.circles-list > li.firstcompleted:before,ul.circles-list > li.previous:before {
-background-color:#c3cc33;
-cursor:pointer;
+background-color:#00ACC1;
+cursor:poPoppins;
 content:"\2713"
 }
 
@@ -3804,7 +3805,7 @@ width:100%
 input[type="submit"],input[type="button"],div.buttonsWrapper div button,button,input.butn {
 margin:6px 2px;
 padding:6px 12px;
-font:bold 12px "Inter",sans-serif
+font:bold 12px "Poppins",sans-serif
 }
 
 input[type="text"].resizedTextbox {
@@ -3812,17 +3813,17 @@ margin:0;
 padding:0 1px 0 2px;
 width:70px;
 height:30px;
-font:normal 11px "Inter",sans-serif
+font:normal 11px "Poppins",sans-serif
 }
 
 input[type="button"].arrowup,input[type="button"].arrowdown {
 padding:1px 4px 3px;
-font:normal 13px "Inter",sans-serif
+font:normal 13px "Poppins",sans-serif
 }
 
 input[type="button"].cross {
 padding:0 6px 2px;
-font:bold 14px "Inter",sans-serif
+font:bold 14px "Poppins",sans-serif
 }
 
 input[type="checkbox"].fakebutn + label,input[type="button"].tc-butn {
@@ -3897,7 +3898,7 @@ width:30px;
 height:30px;
 background:url(../images/icon_menu.png) no-repeat left top;
 background-size:25px 25px;
-cursor:pointer;
+cursor:poPoppins;
 float:left;
 }
 
