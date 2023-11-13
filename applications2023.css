@@ -147,7 +147,7 @@ width:100%
 }
 
 aside p {
-color:#fff
+color:#373534;
 }
 
 section#accountsummary ul {
@@ -818,7 +818,8 @@ border-spacing:0
 }
 
 table.preflist {
-width:100%
+width:100%;
+font-size: 14px;
 }
 
 table.preflist tbody tr:last-of-type {
@@ -1286,6 +1287,11 @@ margin-top:15px
 float:left
 }
 
+.brown_bold {
+font: 12px "Poppins",sans-serif;
+color: #c91474;
+}
+
 @media only screen and (min-width: 1025px) {
 #main {
 padding:0 0 60px
@@ -1694,7 +1700,8 @@ border-top:5px solid #eee
 
 ul.circles-list > li a {
 font:11px 'Poppins', Arial,Helvetica,sans-serif;
-text-transform:uppercase;
+line-height: 1;
+text-transform:initial;
 text-decoration:none;
 color:#000
 }
@@ -2061,12 +2068,11 @@ width:900px
 }
 
 table.preflist thead tr th {
-font-size:120%;
 padding:6px 10px
 }
 
 table.preflist tr td.prefnum,table.preflist tr td.prefcode,table.preflist tr td.prefname {
-font-size:110%;
+font-size:90%;
 padding:0 0 0 20px
 }
 
@@ -2642,7 +2648,8 @@ border-top:5px solid #eee
 
 ul.circles-list > li a {
 font:11px 'Poppins', Arial,Helvetica,sans-serif;
-text-transform:uppercase;
+line-height: 1;
+text-transform:initial;
 text-decoration:none;
 color:#000
 }
@@ -2766,13 +2773,13 @@ font:normal 12px "Poppins",sans-serif
 }
 
 input[type="button"].arrowup,input[type="button"].arrowdown {
-padding:2px 5px;
+padding:2px 10px;
 font:bold 14px "Poppins",sans-serif
 }
 
 input[type="button"].cross {
-padding:0 6px 2px;
-font:bold 14px "Poppins",sans-serif
+    padding:2px 10px;
+    font:bold 14px "Poppins",sans-serif
 }
 
 input[type="checkbox"].fakebutn + label,input[type="button"].tc-butn {
@@ -3074,7 +3081,7 @@ vertical-align:middle
 }
 
 table.preflist thead tr th {
-font-size:13px
+font-size:12px
 }
 
 table.preflist tr td.prefnum,table.preflist tr td.prefcode,table.preflist tr td.prefname {
@@ -3129,13 +3136,13 @@ font:normal 12px "Poppins",sans-serif
 }
 
 input[type="button"].arrowup,input[type="button"].arrowdown {
-padding:2px 4px 3px;
-font:normal 12px "Poppins",sans-serif
+    padding:2px 8px;
+    font:normal 12px "Poppins",sans-serif
 }
 
 input[type="button"].cross {
-padding:1px 6px 2px;
-font:bold 13px "Poppins",sans-serif
+    padding:2px 10px;
+    font:bold 13px "Poppins",sans-serif
 }
 
 input[type="checkbox"].fakebutn + label,input[type="button"].tc-butn {
@@ -3434,7 +3441,7 @@ vertical-align:middle
 }
 
 table.preflist thead tr th {
-font-size:13px
+font-size:12px
 }
 
 table.preflist tr td.prefnum,table.preflist tr td.prefcode,table.preflist tr td.prefname {
@@ -3490,13 +3497,13 @@ font:normal 12px "Poppins",sans-serif
 }
 
 input[type="button"].arrowup,input[type="button"].arrowdown {
-padding:1px 4px 3px;
-font:normal 13px "Poppins",sans-serif
+    padding:2px 6px;
+    font:normal 13px "Poppins",sans-serif
 }
 
 input[type="button"].cross {
-padding:0 6px 2px;
-font:bold 14px "Poppins",sans-serif
+    padding:2px 8px;
+    font:bold 14px "Poppins",sans-serif
 }
 
 input[type="checkbox"].fakebutn + label,input[type="button"].tc-butn {
@@ -3765,7 +3772,7 @@ vertical-align:middle
 }
 
 table.preflist thead tr th {
-font-size:13px
+font-size:12px
 }
 
 table.preflist tr td.prefnum,table.preflist tr td.prefcode,table.preflist tr td.prefname {
@@ -3823,12 +3830,12 @@ font:normal 11px "Poppins",sans-serif
 }
 
 input[type="button"].arrowup,input[type="button"].arrowdown {
-padding:1px 4px 3px;
+    padding:2px 6px;
 font:normal 13px "Poppins",sans-serif
 }
 
 input[type="button"].cross {
-padding:0 6px 2px;
+    padding:2px 8px;
 font:bold 14px "Poppins",sans-serif
 }
 

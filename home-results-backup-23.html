@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="cleartype" content="on">
+<title>VTAC: Victorian Tertiary Admissions Centre</title>
+<style>
+/* layout */
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    min-height: 100%;/* for firefox */
+}
+#masthead {
+    background: #fff;
+    margin: 0;
+    padding: 0;/*box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);*/
+}
+#mainmenu {
+    background: #06068F;
+    width: 80%;
+    clip-path: polygon(0 0, 100% 0, 99% 100%, 0 100%);
+    margin: 0;
+    padding: 0;
+    height: 36px;
+}
+article#main {
+    margin: 0;
+    padding: 0;
+    min-height: 400px;
+}
+article#main section {
+    overflow: auto;
+    padding: 20px 0;
+    margin: 0 0 20px 0;
+}
+/* HTML5 tags */
+div#masthead div#branding, div#mainmenu nav#mainnav, article#main section {
+    display: block;
+    text-align: center;
+    clear: both;
+}
+/* text styles */
+
+p, td, body, .butn a {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #000;
+    text-align: left;
+}
+p {
+    padding: 10px 0 6px 10px;
+}
+h2 {
+    text-align: left;
+}
+article#main section h2 {
+    padding: 25px 0 15px 0;
+}
+h2 {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #455a64;
+}
+h2.main {
+    color: #06068F;
+}
+article#main section h3 {
+    text-align: left;
+    font-size: 1.5rem;
+    padding-top: 1.25em;
+    padding-bottom: .25em;
+    color: #212529;
+}
+article#main section h3.card-title {
+    margin-top: 0;
+    margin-bottom: .5rem;
+	padding-top: .5em;
+}
+h2+h3 {
+    padding-top: .5em !important;
+}
+article#main section h4 {
+    text-align: left;
+    font-size: 1.2rem;
+    padding-top: 1.25em;
+    padding-bottom: .25em;
+    color: #333333;
+}
+.small {
+    font-size: 90%;
+}
+/* links */
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+a:hover {
+    color: #007bff;
+    text-decoration: underline
+}
+a {
+    /* Warning: Needed for oldIE support, but words are broken up letter-by-letter */
+    -ms-word-break: break-all;
+    word-break: break-all;
+    /* Non standard for webkit */
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+div#mainmenu nav#mainnav a {
+    font-size: 16px;
+    font-weight: bold;
+    float: right;
+    margin: 8px 40px 0 0;
+}
+.butn {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    padding: 15px 30px !important;
+    border: 1px #0178bd solid;
+    background-color: #06068F;
+    border-radius: 5px 5px 5px 5px;
+    color: #fff;
+}
+.butn:hover {
+    color: #0D47A1;
+}
+.butn a, div#mainmenu nav#mainnav a {
+    color: #fff;
+}
+.butn.badge {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    padding: 10px !important;
+    margin: 8px 8px 8px 0;
+    border: 1px #ccc solid;
+    border-radius: 5px 5px 5px 5px;
+    color: #666;
+    background-color: #fff;
+    white-space: nowrap;
+    line-height: 1em;
+    display: inline-block;
+    cursor: pointer;
+}
+.butn.badge.highlighted {
+    font-weight: bold;
+    border: 1px #666 solid;
+    background-color: rgb(13, 109, 253);
+    color: #fff;
+}
+/* lists */
+
+article#main section ul, article#main section ol {
+    margin: 0;
+    text-align: left;
+    padding: 6px 0 12px 20px;
+    list-style-type: disc;
+    line-height: 1.5;
+}
+ul.list-group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin: 0;
+}
+ul.list-group li {
+    position: relative;
+    display: block;
+    padding: .75rem 0;
+    background-color: #fff;
+    border-top: 1px solid rgba(0, 0, 0, .125);
+}
+ul.list-group li:first-child {
+    border: none;
+}
+/* tables */
+
+table {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0;
+    color: #212529;
+}
+table.responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+table thead th {
+    color: #fff !important;
+    background-color: #06068F !important;
+}
+table tbody tr:nth-of-type(2n+1) {
+    background-color: rgba(0, 0, 0, .03);
+}
+table td, table th {
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    vertical-align: top;
+    text-align: left;
+}
+/* other */
+
+article#main section .card-container {
+    display: table;
+    border-spacing: 10px;
+    padding: 0;
+}
+.card {
+    position: relative;
+    min-width: 0;
+    height: 100%;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 0 0 .25rem .25rem;
+}
+article#main section .card {
+    width: 30%;
+    height: 100%;
+    display: table-cell;
+    border-spacing: 5px;
+	border-top: 30px solid #B6BBED;
+}
+article#main section .card.unstyled {
+	width: 35%;	
+	border: none;
+}	
+.card-body {
+    padding: .5em .75em;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+}
+.border-0 {
+    border: none !important;
+}
+.hidden {
+    display: none;
+}
+
+@media only screen and (min-width:1400px) {
+article#main section>* {
+    width: 1380px;
+}
+div#masthead div#branding {
+    width: 1380px;
+}
+}
+
+@media only screen and (min-width:1020px) and (max-width: 1399px) {
+article#main section>* {
+    width: 1000px;
+}
+div#masthead div#branding {
+    width: 1000px;
+}
+}
+
+@media only screen and (min-width:1025px) {
+#masthead {
+    padding: 10px;
+}
+div#masthead div#branding {
+    height: 51px;
+    margin: 0 auto;
+    padding: 5px 0 0 0;
+    background: #fff url(images/logo.png) no-repeat left center;
+    background-size: 110px 45px;
+}
+a.linklogo {
+    width: 200px;
+    height: 56px;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+article#main section>* {
+    margin: 0 auto;
+    padding: 10px 0 0 0;
+}
+article#main section.contentbody {
+    margin: 0 auto;
+    padding: 10px 0 30px 0;
+    overflow: hidden;
+}
+article#main section ul, article#main section ol {
+    margin: 0 auto;
+    padding: 6px 0 6px 55px;
+    max-width: 95%
+}
+article#main section ul, article#main section ol.list-group {
+    margin: 0;
+    padding: 0 0 6px 0;
+}
+/* text styles */
+
+p, .butn a {
+    font-size: 18px;
+}
+h2.main {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 1.9rem;
+}
+td {
+    font-size: 16px;
+}
+article#main section ul, article#main section ol li {
+    font-size: 18px;
+}
+/*Misc*/
+.trapezoid {
+	position: absolute;
+	top: 200px;
+	right: 0;
+    background: #59CBC8;
+	z-index: -1;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    height: 200px;
+}
+.circle {
+	position: absolute;
+	top: 550px;
+	left: -80px;
+    background: #FFCC00;
+	z-index: -1;
+    clip-path: circle(50% at 50% 50%); 
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    height: 200px;		
+}
+.rhombus {
+	position: absolute;
+	top: 800px;
+	right: -80px;
+    background: #4B068F;
+	z-index: -1;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+	margin: 0;
+    padding: 0;
+    width: 250px;
+    height: 250px;
+}		
+}
+
+@media only screen and (min-width: 961px) and (max-width: 1024px) {
+#masthead {
+    padding: 10px;
+}
+div#masthead div#branding {
+    width: 98%;
+    height: 51px;
+    margin: 0 10px 5px 10px;
+    padding: 5px 0 0 0;
+    background: #fff url(images/logo.png) no-repeat left center;
+    background-size: 110px 45px;
+}
+a.linklogo {
+    width: 200px;
+    height: 56px;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+article#main section>* {
+    width: 98%;
+    margin: 0 10px 0 10px;
+    padding: 10px 0 0 0;
+}
+article#main section.contentbody ul {
+    margin: 0 auto;
+    padding: 10px 0 10px 10px;
+    max-width: 95%;
+}
+article#main section.contentbody ul.list-group {
+    margin: 0;
+    padding: 0 0 6px 0;
+}
+/* text styles */
+
+p, td, .butn a {
+    font-size: 18px;
+}
+h2 {
+    font-size: 3rem;
+}
+article#main section ul, article#main section ol li {
+    font-size: 18px;
+}
+}
+
+@media only screen and (min-width: 641px) and (max-width: 960px) {
+div#masthead div#branding {
+    width: 98%;
+    height: 51px;
+    margin: 0 10px 5px 10px;
+    padding: 5px 0 0 0;
+    background: #fff url(images/logo.png) no-repeat left center;
+    background-size: 110px 45px;
+}
+a.linklogo {
+    width: 200px;
+    height: 61px;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+article#main section>* {
+    width: 98%;
+    margin: 0 10px 0 10px;
+    padding: 10px 0 0 0;
+}
+article#main section.contentbody ul {
+    margin: 0 0 0 25px;
+    padding: 10px 0 10px 10px;
+    max-width: 95%;
+}
+article#main section.contentbody ul.list-group {
+    margin: 0;
+    padding: 0 0 6px 0;
+}
+/* text styles */
+
+p, td, .butn a {
+    font-size: 16px;
+}
+h2 {
+    font-size: 24px;
+}
+article#main section ul, article#main section ol li {
+    font-size: 16px;
+}
+article#main section .card {
+    width: 95%;
+    display: table;
+    margin: 0 0 8px 0;
+}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 640px) {
+div#masthead {
+    margin: 0;
+    padding: 5px;
+}
+div#branding {
+    height: 46px;
+    background: #fff url(images/logo.png) no-repeat left center;
+    background-size: 86px 35px;
+}
+a.linklogo {
+    width: 115px;
+    height: 46px;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+article#main section>* {
+    width: 95%;
+    margin: 0 10px 0 10px;
+    padding: 10px 5px 0 0;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+article#main section.contentbody ul {
+    margin: 0 0 0 20px;
+    padding: 10px 0 10px 10px;
+    max-width: 95%;
+}
+article#main section.contentbody ul.list-group {
+    margin: 0;
+    padding: 0 0 6px 0;
+}
+/* text styles */
+
+p, td, .butn a {
+    font-size: 16px;
+}
+h2 {
+    font-size: 24px;
+}
+article#main section ul, article#main section ol li {
+    font-size: 16px;
+}
+article#main section .card {
+    width: 95%;
+    display: table;
+    margin: 0 0 8px 0;
+}
+}
+
+@media only screen and (max-width: 480px) {
+html, body {
+    min-width: 320px;
+}
+div#masthead {
+    margin: 0;
+    padding: 5px;
+}
+div#branding {
+    height: 46px;
+    background: #fff url(images/logo.png) no-repeat left center;
+    background-size: 86px 35px;
+}
+a.linklogo {
+    width: 115px;
+    height: 46px;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+article#main section>* {
+    width: 95%;
+    margin: 0 10px 0 10px;
+    padding: 10px 5px 0 0;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+article#main section.contentbody ul {
+    margin: 0 0 0 20px;
+    padding: 10px 0 10px 10px;
+    max-width: 95%;
+}
+article#main section.contentbody ul.list-group {
+    margin: 0;
+    padding: 0 0 6px 0;
+}
+/* text styles */
+
+p, td {
+    font-size: 16px;
+}
+.butn a {
+    font-size: 16px;
+}
+.butn a .d-xs-none {
+    display: none;
+}
+h2 {
+    font-size: 24px;
+}
+article#main section ul, article#main section ol li {
+    font-size: 16px;
+}
+article#main section .card {
+    width: 95%;
+    display: table;
+    margin: 0 0 8px 0;
+}
+}
+</style>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Home</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9028529454102518" crossorigin="anonymous"></script> 
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+<!-- Custom JavaScript -->
+<script type="text/javascript">
+	window.googletag = window.googletag || {cmd: []};
+
+    // Extract title from last section of url
+    getPageURL = window.location.pathname;
+    pageURLArray = getPageURL.split('/');
+    pageLast = '';
+    page1st = pageURLArray[1];
+    page2nd = pageURLArray[2];
+    while (pageURLArray.length > 0 && pageLast == '') {
+      pageLast = pageURLArray.pop();
+    }
+
+    // Ad Tester (add "?adtest=testvalue" to url, inserts KV for targeting)
+    function getQueryVariable(variable) {
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        if (pair[0] == variable) {
+          return pair[1];
+        }
+      }
+      return ('false');
+    }
+    var kvAdTest = getQueryVariable("adtest");
+    
+    // Prepare all targeting and size mapping
+    const gamData = {
+      "adUnit": "/22917295869/VTAC/dates",
+      "kv": {
+        "institution": "",
+        "loggedin": "N",
+        "title": pageLast,
+        "adtest": kvAdTest
+        },
+      "sizeMap": {
+        "largesquare":[[[0,0],[350,350]]],
+        "billboard":[[[992,0],[970,250]],[[0,0],[300,250]]],
+        "leaderboard":[[[1200,0],[728,90]],[[0,0],[300,250]]],
+        "largerec":[[[1200,0],[650,300]],[[0,0],[300,250]]],
+        "custom":[[[0,0],[300,250]]]
+        }
+      }
+      
+    // Set page-level key-values and GPT settings
+    googletag.cmd.push(function() {
+     if (gamData.kv) {
+       Object.keys(gamData.kv).forEach(function(key) {
+         googletag.pubads().setTargeting(key, gamData.kv[key]);
+       });
+     }
+     googletag.pubads().setCentering(true);
+     googletag.pubads().collapseEmptyDivs();
+
+    // Enable lazy-loading for all ad slots
+     googletag.pubads().enableLazyLoad({ fetchMarginPercent: 200, renderMarginPercent: 50, mobileScaling: 2.0 });
+
+    // Register event handlers to observe lazy loading behavior.
+    googletag.pubads().addEventListener('slotRequested', function(event) {
+      console.log(event.slot.getSlotElementId(), 'fetched');
+    });
+    googletag.pubads().addEventListener('slotOnload', function(event) {
+      console.log(event.slot.getSlotElementId(), 'rendered');
+	// VTAC added code to original: start
+	gamDetector();
+	// VTAC added code to original: end
+    });
+    googletag.enableServices();
+    // Refresh ads on screen size changes
+    if (window.addEventListener) {
+      window.addEventListener('resize', browserResize);
+    } else if (window.attachEvent) {
+      window.attachEvent('onresize', browserResize);
+    }
+     let InitialResize = window.innerWidth;
+     function browserResize() {
+      const afterResize = window.innerWidth;
+      if (
+       (InitialResize < 1400 && afterResize >= 1400) || (InitialResize >= 1400 && afterResize < 1400) ||
+       (InitialResize < 1200 && afterResize >= 1200) || (InitialResize >= 1200 && afterResize < 1200) ||
+       (InitialResize < 992 && afterResize >= 992) || (InitialResize >= 992 && afterResize < 992) ||
+       (InitialResize < 768 && afterResize >= 768) || (InitialResize >= 768 && afterResize < 768) ||
+       (InitialResize < 576 && afterResize >= 576) || (InitialResize >= 576 && afterResize < 576)
+      ) {
+        InitialResize = afterResize;
+         googletag.cmd.push(function() {
+         googletag.pubads().refresh();
+         });
+        }
+      }
+   });
+   
+    // Output to console for testing
+    console.log("GAM ad unit: " + gamData.adUnit);
+    console.log("GAM logged in: " + gamData.kv.loggedin);
+    console.log("GAM institution: " + gamData.kv.institution);
+    console.log("Page title: " + pageLast);
+    console.log("Page 1st level: " + page1st);
+    console.log("Page 2nd level: " + page2nd);
+
+/* Detect if ad is served and add link to why the ads? page */
+setTimeout(gamDetector, 1000);
+
+function gamDetector() {
+  let parent = document.querySelector('div[id="gam_largesquare_pos1"]');
+  let iframeElement = document.querySelector(
+    '[id^="google_ads_iframe"] > iframe'
+  );
+
+  if (iframeElement) {
+    console.log("ads running");
+    let child = document.querySelector('[id="whytheads"]');
+    if (parent && !child) {
+      let str = `<div id="whytheads"><p><small><a href="/whytheads">Advertisement</a></small></p></div>`;
+      parent.insertAdjacentHTML("beforeend", str);
+    }
+  }
+}</script>
+
+</head>
+
+<body>
+<script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NFK5FF');
+</script>
+<div id="mainmenu">
+  <nav id="mainnav"><a href="#contact">Contact Us</a></nav>
+</div>
+<div id="masthead"> 
+  <!-- #top -->
+  <div id="branding" role="banner"><a href="/" class="linklogo"></a></div>
+</div>
+<!-- #masthead -->
+<article id="main">
+  <section class="contentbody">
+    <h2  class="main">VCE Results and ATAR 2023</h2>
+    <p style="margin-bottom: 20px;">To access your VCE results and ATAR, login with your VCAA Student Number and
+      Results Service password.</p>
+    <p class="down"><span class="butn"
+                    style="padding: 15px 30px; border-radius: 6px 6px 6px 6px; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .24), 0 2px 10px 0 rgba(0, 0, 0, .20);"><a
+                        href="https://resultsandatar.vic.edu.au/">Login<span class="d-xs-none"> to the Results and ATAR Service</span> <span style="font-size:110%">&nbsp;&nbsp;&raquo;</span></a></span> </p>
+    <p style="margin-top: 18px;"><small><a
+                        href="https://resultsandatar.vic.edu.au/results/an/students/fpwd.htm">Forgot
+      your Results Service password?</a></small></p>
+    <p style="margin-top: 10px;">To keep up-to-date, visit the <a href="http://pras.resultsandatar.vic.edu.au/"
+                    target="_blank">Post Results and ATAR Service website</a> or follow VTAC on <a
+                    href="https://www.facebook.com/vtacguide" target="_blank">Facebook</a>.</p>
+    <div style="clear: both;"></div>
+  </section>
+  <div class="trapezoid"></div>
+  <div class="circle"></div>
+  <div class="rhombus"></div>	
+  <section class="contentbody">
+    <h2 style="padding-top: 0;">VTAC account</h2>
+    <p>You can <a href="https://delta.vtac.edu.au/appView/home.htm">login to your account </a> to access key
+      services.</p>
+    <div class="card-container" style="min-height: 180px; margin-top: 32px;">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Important resources </h3>
+          <ul class="list-group">
+            <li><a href="https://delta.vtac.edu.au/coursesearch/"
+                                    target="_blank">CourseSearch</a></li>
+            <li><a href="https://delta.vtac.edu.au/courselink/" target="_blank">VTAC CourseLink</a></li>
+            <li><a href="#cop">How to change course preferences</a></li>
+            <li><a href="#dates">Important dates</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">ATAR and scaling </h3>
+          <ul class="list-group">
+            <li><a href="Vh363i9Rb0.pdf">Scaling Report </a>(PDF)</li>
+            <li><a href="k92OM2OUho.pdf">Aggregate to ATAR table</a> (PDF)</li>
+            <li><a href="atar-scaling-guide.html">The VTAC ATAR and Scaling Guide for 2023</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="card unstyled">
+		  <div id="gam_largesquare_pos1">
+			<script type="text/javascript">
+              googletag.cmd.push(function() {
+              googletag.defineSlot(gamData.adUnit, [[350, 350],[300, 250]],'gam_largesquare_pos1')
+              .defineSizeMapping(gamData.sizeMap.largesquare)
+              .setTargeting('pos', '1')
+              .addService(googletag.pubads());
+              googletag.display('gam_largesquare_pos1');
+              });
+            </script>
+		 </div>
+	  </div>
+    </div>
+    <div style="clear:both;"></div>
+    <p style="padding-top: 10px; font-weight: normal"><strong>Please note:</strong> You will be able to access
+      all information on the VTAC website later on today.</p>
+    <p style="padding-top: 10px; font-weight: normal">&nbsp;</p>
+  </section>
+  <section id="cop" style="background: rgb(248,248,248); background: radial-gradient(circle, rgba(248,248,248,1) 0%, rgba(244,250,250,1) 100%);">
+    <h2  class="main">Changing course preferences</h2>
+    <p>During specified periods you will be able to add, remove or re-order your course preferences in your
+      course application.</p>
+    <h3>When can I change my preferences?</h3>
+    <p>Change of preference is closed during each selection period (just before each offer round) but is
+      open at all other times. For the next change of preference period, check the <a href="#dates">dates</a> below.</p>
+    <h3>How to change your preferences</h3>
+    <h4>1. Log in to your VTAC account</h4>
+    <p>To access change of preference you must log in to your VTAC account using your VTAC ID and PIN.</p>
+    <h4>2. Open your course preference list</h4>
+    <p>You can open your course preference list from the link on the home page of your VTAC account, or
+      under Course application.</p>
+    <h4>3. Add, delete or re-order your course preferences</h4>
+    <p>You can add courses by using the institution and course drop down menus or by entering the course
+      codes. You can delete courses by clicking on the red X to the right of each line. You can re-order
+      your course preferences using the up and down arrows to the right of each line.</p>
+    <p>Don't forget to list course in the order you would most like to study them, with the course you most
+      want to get into at the top.</p>
+    <h4>4. Submit your change of preference</h4>
+    <p>Click on the Change my preference button at the bottom of the screen to submit your changes.</p>
+  </section>
+  <section id="dates">
+    <h2  class="main">Important dates</h2>
+    <p>Please select an applicant type to show upcoming application and offer dates.</p>
+    <p><span class="butn badge dom highlighted" onclick="changeAppGroup('.dom')">Current Year 12 (Domestic
+      students)</span><span class="butn badge int" onclick="changeAppGroup('.int')">Current Year
+      12 (International students)</span><span class="butn badge ny12"
+                    onclick="changeAppGroup('.ny12')">Non Year 12 applicants</span><span class="butn badge get"
+                    onclick="changeAppGroup('.get')">Graduate Entry Teaching (GET)</span></p>
+    <div class="domDates appGroup">
+      <div id="domQuick" class="infoGroup">
+        <h3>Current Year 12 (Domestic students)</h3>
+        <table class="table table-striped table-bordered hover responsive" style="width: 100%;">
+          <thead class="black white-text">
+            <tr>
+              <th style="width: 34%;">For consideration for offers released on</th>
+              <th style="width: 22%;">Apply by</th>
+              <th style="width: 22%;">Pay by</th>
+              <th style="width: 22%;">Change your preferences by</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>21 December 2023 (December offer round domestic ) (VIC, ACT, NSW, QLD and TAS current year 12 students only)</td>
+              <td>1 December (5pm)</td>
+              <td>5 December (4pm)</td>
+              <td>13 December (4pm) (Vic  only)<br>
+                <br>
+                15 December (4pm) (ACT, NSW QLD and Tas only)</td>
+            </tr>
+            <tr>
+              <td>13 January 2024 (January offer round 1 domestic)</td>
+              <td>1 December (5pm)</td>
+              <td>18 December (4pm)</td>
+              <td>22 December (4pm) / IB only - 5 January 2024 (4pm)</td>
+            </tr>
+            <tr>
+              <td>30 January 2024 (January offer round 2 domestic)</td>
+              <td>16 January 2024 (5pm)</td>
+              <td>18 January 2024 (4pm)</td>
+              <td>18 January 2024 (4pm)</td>
+            </tr>
+            <tr>
+              <td>6 February 2024 (February offer round 1 domestic)</td>
+              <td>16 January 2024 (5pm)</td>
+              <td>1 February 2024 (4pm)</td>
+              <td>1 February 2024 (4pm)</td>
+            </tr>
+            <tr>
+              <td>13 February 2024 (February offer round 2 domestic)</td>
+              <td>16 January 2024 (5pm)</td>
+              <td>8 February 2024 (4pm)</td>
+              <td>8 February 2024 (4pm)</td>
+            </tr>
+            <tr>
+              <td>20 February 2024 (February offer round 3 domestic)</td>
+              <td>16 January 2024 (5pm)</td>
+              <td>14 February 2024 (4pm)</td>
+              <td>14 February 2024 (4pm)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="intDates appGroup hidden">
+      <h3>Current Year 12 (International students)</h3>
+      <div class="intQuick infoGroup">
+        <table class="table table-striped table-bordered hover" style="width: 100%;">
+          <thead class="black white-text">
+            <tr>
+              <th style="width: 34%;">For consideration for offers released on</th>
+              <th style="width: 22%;">Apply by</th>
+              <th style="width: 22%;">Pay by</th>
+              <th style="width: 22%;">Change your preferences by</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table table-striped table-bordered hover responsive">
+              <td>21 December 2023 (December offer round domestic ) (VIC, ACT, NSW, QLD and TAS current year 12 students only)</td>
+              <td>1 December (5pm)</td>
+              <td>5 December (4pm)</td>
+              <td>13 December (4pm) (Vic  only)<br>
+                <br>
+                15 December (4pm) (ACT, NSW QLD and Tas only)</td>
+            </tr>
+            <tr>
+              <td>5 January 2024 (January offer round 1 international)</td>
+              <td>1 December (5pm)</td>
+              <td>18 December (4pm)</td>
+              <td>22 December (4pm) </td>
+            </tr>
+            <tr>
+              <td>11 January 2024 (January offer round 2 international)</td>
+              <td>9 January 2024 (4pm)</td>
+              <td>9 January 2024 (4pm)</td>
+              <td>9 January 2024 (4pm) / IB only - 5 January 2024 (4pm)</td>
+            </tr>
+            <tr>
+              <td>16 January 2024 (January offer round 3 international)</td>
+              <td>12 January 2024 (4pm)</td>
+              <td>12 January 2024 (4pm)</td>
+              <td>12 January 2024 (4pm)</td>
+            </tr>
+            <tr>
+              <td>19 January 2024 (January offer round 4 international)</td>
+              <td>16 January 2024 (5pm)</td>
+              <td>16 January 2024 (4pm)</td>
+              <td>17 January 2024 (4pm)</td>
+            </tr>
+            <tr>
+              <td>29 January 2024 (January offer round 5 international)</td>
+              <td>19 January 2024 (5pm)</td>
+              <td>19 January 2024 (4pm)</td>
+              <td>23 January 2024 (4pm)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="ny12Dates appGroup hidden">
+      <h3>Non Year 12 applicants</h3>
+      <div class="ny12Quick infoGroup">
+        <table class="table table-striped table-bordered hover" style="width: 100%;">
+          <thead class="black white-text">
+            <tr>
+              <th style="width: 34%;">For consideration for offers released on</th>
+              <th style="width: 22%;">Apply by</th>
+              <th style="width: 22%;">Pay by</th>
+              <th style="width: 22%;">Change your preferences by</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>12 January 2024 (January offer round 1 domestic )</td>
+              <td>1 December (5pm)</td>
+              <td>5 December (4pm)</td>
+              <td>5 December (4pm)</td>
+            </tr>
+            <tr class="table table-striped table-bordered hover responsive">
+              <td>30 January 2024 (January offer round 2 domestic)</td>
+              <td>16 January 2024 (5pm)</td>
+              <td>18 January 2024 (4pm)</td>
+              <td>18 January 2024 (4pm)</td>
+            </tr>
+            <tr class="table table-striped table-bordered hover responsive">
+              <td>6 February 2024 (February offer round 1 domestic)</td>
+              <td>16 January 2024 (5pm)</td>
+              <td>1 February 2024 (4pm)</td>
+              <td>1 February 2024 (4pm)</td>
+            </tr>
+            <tr class="table table-striped table-bordered hover responsive">
+              <td>13 February 2024 (February offer round 2 domestic)</td>
+              <td>16 January 2024 (5pm)</td>
+              <td>8 February 2024 (4pm)</td>
+              <td>8 February 2024 (4pm)</td>
+            </tr>
+            <tr class="table table-striped table-bordered hover responsive">
+              <td>20 February 2024 (February offer round 3 domestic)</td>
+              <td>16 January 2024 (5pm)</td>
+              <td>14 February 2024 (4pm)</td>
+              <td>14 February 2024 (4pm)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="getDates appGroup hidden">
+      <h3>Graduate Entry Teaching (GET)</h3>
+      <div class="getQuick infoGroup">
+        <table class="table table-striped table-bordered hover" style="width: 100%;">
+          <thead class="black white-text">
+            <tr>
+              <th style="width: 34%;">For consideration for offers released on</th>
+              <th style="width: 22%;">Apply by</th>
+              <th style="width: 22%;">Pay by</th>
+              <th style="width: 22%;">Change your preferences by</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>8 January 2024 (January offer round 1 GET)</td>
+              <td>3 November (5pm)</td>
+              <td>5 December (4pm)</td>
+              <td>20 November (4pm)</td>
+            </tr>
+            <tr>
+              <td>12 January 2024 (January offer round 2 GET)</td>
+              <td>3 November (5pm)</td>
+              <td>10 January 2024 (4pm)</td>
+              <td>10 January 2024 (4pm)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <section id="contact" style="padding-bottom: 10rem; background: rgb(248,248,248); background: radial-gradient(circle, rgba(248,248,248,1) 0%, rgba(244,250,250,1) 100%);">
+    <h2  class="main">Contact VTAC or PRAS</h2>
+    <p>You can phone VTAC on <strong>(03) 9926 1020</strong> or send an email via your VTAC account.</p>
+    <p>For questions about your your VCE results and ATAR, you can contact the <a
+                    href="http://pras.resultsandatar.vic.edu.au/">Post Results and ATAR Service</a>, which is run
+      jointly by VTAC and VCAA.</p>
+    <div>
+      <table class="table table-striped table-bordered hover responsive" style="width: 100%;">
+        <thead>
+          <tr>
+            <th>&nbsp;</th>
+            <th>VTAC Applicant Services<br></th>
+            <th>Post Results and ATAR Service<br>
+              <small>(03)&nbsp;9637&nbsp;3877</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday 11 December</td>
+            <td>7am-5pm</td>
+            <td>7am-5pm</td>
+          </tr>
+          <tr>
+            <td>Tuesday 12 December</td>
+            <td>9:30am-5pm</td>
+            <td>9am-5pm</td>
+          </tr>
+          <tr>
+            <td>Wednesday 13 December</td>
+            <td>9:30am-5pm</td>
+            <td>9am-5pm</td>
+          </tr>
+          <tr>
+            <td>Thursday 14 December</td>
+            <td>9:30am-5pm</td>
+            <td>9am-5pm</td>
+          </tr>
+          <tr>
+            <td>Friday 15 December</td>
+            <td>9:30am-5pm</td>
+            <td>9am-5pm*</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>*After this date, PRAS will close until 2024 results and ATAR release.</p>
+    <p>&nbsp;</p>
+  </section>
+</article>
+<!-- #main --> 
+
+<script type="text/javascript">
+
+        function addClass(el, className) {
+            var el = document.querySelectorAll(el);
+
+            for (i = 0; i < el.length; i++) {
+                if (el.classList) {
+                    el[i].classList.add(className);
+                } else {
+                    el[i].className += ' ' + className;
+                }
+            }
+        }
+
+        function removeClass(el, className) {
+            var el = document.querySelectorAll(el);
+
+            //document.querySelector('.appGroup').classList.add('hidden');
+
+            for (i = 0; i < el.length; i++) {
+
+                if (el[i].classList) {
+                    el[i].classList.remove(className);
+                } else {
+                    el[i].className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+                }
+            }
+        }
+
+        function changeAppGroup(el) {
+
+            var datesDiv = el + 'Dates';
+            var quickDiv = el + 'Quick';
+
+            // reset all appGroup classes
+            addClass('.appGroup', 'hidden');
+            removeClass('.badge', 'highlighted');
+
+            // show and highlight selected group
+            removeClass(datesDiv, 'hidden');
+            addClass(el, 'highlighted');
+
+            // show quick reference table
+            removeClass(quickDiv, 'hidden');
+        }
+    </script>
+</body>
+</html>
