@@ -215,7 +215,7 @@ table td, table th {
 /* other */
 
 article#main section .card-container {
-    display: table;
+    display: flex;
     border-spacing: 10px;
     padding: 0;
 }
@@ -231,10 +231,11 @@ article#main section .card-container {
 }
 article#main section .card {
     width: 30%;
-    height: 100%;
-    display: table-cell;
+    margin-right:4px;
+    height: 350px;
+    flex-grow: 1;
     border-spacing: 5px;
-	border-top: 30px solid #B6BBED;
+	  border-top: 30px solid #B6BBED;
 }
 article#main section .card.unstyled {
 	width: 35%;	
@@ -587,7 +588,7 @@ function downloadJSAtOnload() {
     element.async = true;
     //element.setAttribute("crossorigin", "anonymous");
     document.body.appendChild(element);
-  }, 5000);
+  }, 2000);
 }
 if (window.addEventListener)
   window.addEventListener("load", downloadJSAtOnload, false);
@@ -779,7 +780,7 @@ function gamDetector() {
           </ul>
         </div>
       </div>
-      <div class="card unstyled">
+      <div class="card unstyled" >
 		  <div id="gam_billboard_pos1">
 			<script type="text/javascript">
                 googletag.cmd.push(function() {
