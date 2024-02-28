@@ -1246,6 +1246,7 @@ a.material-icons {
 .navbar-nav .nav-item .nav-link {
   font-size: 12px;
   text-align: left;
+  font-weight: 700;
 }
 
 @media (min-width: 1200px) {
