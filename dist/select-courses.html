@@ -1,0 +1,878 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>VTAC</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/dist/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/dist/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/dist/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/dist/images/site.webmanifest">
+    <link rel="icon" href="/dist/images/favicon.ico">
+
+    <!-- Material Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        .lock-scroll {
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <nav id="mainnav" class="masthead navbar navbar-expand-xl navbar-light bg-white shadow-none">
+            <div class="container justify-content-between"> <a class="navbar-brand" href="/"><img
+                        src="/dist/images/logos/vtac-logo.png" alt="VTAC logo" width="130px" height="50px"></a>
+                <div>
+                    <div class="nav-item d-inline"><a role="button" class="ms-link" href=""><span
+                                class="d-xl-flex d-none nav-link">My profile</span><span class="d-xl-none"><span
+                                    class="material-symbols-outlined mso-30 mso-dark-blue">account_circle</span></span>
+                        </a> </div>
+                    <div class="nav-item d-inline d-xl-none align-middle"><a class="position-relative" href="/"
+                            role="button"><span class="d-xl-none"><span
+                                    class="material-symbols-outlined mso-30 mso-dark-blue">mail</span> <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">9<span
+                                        class="visually-hidden">unread messages</span>
+                                </span></span></a> </div>
+                    <button class="navbar-toggler align-middle mt-1" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                        aria-label="Toggle navigation"> <span class="material-symbols-outlined mso-36">menu</span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse mb-3 mb-xl-0" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0 container">
+                        <li class="nav-item"><a class="nav-link" href="#">Course preferences </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">My education </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">SEAS &amp; scholarships </a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Providing evidence </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Applicant statements </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Course offers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Nominees &amp; agents </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Get in touch </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item d-none d-xl-inline"><a class="position-relative" href="" role="button"><span
+                            class="material-symbols-outlined mso-30 mso-dark-blue">mail</span><span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">9<span
+                                class="visually-hidden">unread messages</span>
+                        </span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main site navigation -->
+    <section id="heading" class="container-fluid px-0" style="background-color:#F0F3F9">
+        <div class="container-fluid px-0 mainheading">
+            <h1 class="mt-0 mb-2 container">Course preferences</h1>
+        </div>
+    </section>
+    <main id="maincontent" class="container-fluid">
+        <article id="main" class="container">
+            <!--Section: Content-->
+            <section id="contentbody">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Select courses</h2>
+                        <p>Search for courses and add them as preferences. You must select at least one university, TAFE
+                            or tertiary college.</p>
+                        <p>After adding courses, View courses to arrange them in order of preference.</p>
+                        <button type="button" value="viewprefs" class="btn bg-vtac-dark-blue small text-white">
+                            <span
+                                class="bg-transparent border-0 shadow-none material-symbols-outlined me-1">backpack</span>
+                            View course preferences (<span class="numberOfPrefs">2</span>)</button>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <h3>Search for courses</h3>
+                    <div class="col-12 col-lg-6 col-xl-5 pe-xl-5 mt-4">
+                        <div id="pref-filters">
+                            <div id="keywordFilters" class="mb-2">
+                                <label for="keyword" class="form-label">Course keyword,
+                                    code or institution</label>
+                                <div class="input-group mb-3">
+                                    <input id="keyword" type="text" placeholder="Search for courses"
+                                        aria-label="Search for courses" aria-describedby="keyword" class="form-control">
+                                    <button class="btn btn-outline-secondary btn-search mt-0" type="button"><span
+                                            class="material-symbols-outlined">search</span></button>
+                                </div>
+                            </div>
+                            <div id="filtersCollapseShow" class="mb-5">
+                                <div id="searchFilters" class="accordion">
+                                    <div class="accordion-item">
+                                        <div class="accordion-header" id="instId-header"><button type="button"
+                                                class="accordion-button collapsed" data-bs-toggle="collapse"
+                                                data-bs-target="#instId" aria-expanded="false" aria-controls="instId">
+                                                <span
+                                                    class="material-symbols-outlined me-2 ">location_city</span>Universities,
+                                                TAFEs &amp; Colleges </button></div>
+                                        <div id="instId" aria-labelledby="instId-header"
+                                            class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <div class="input-group my-2">
+                                                    <input type="text" id="inst" formcontrolname="instKeyword"
+                                                        placeholder="Filter by institution name" class="form-control">
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst0"
+                                                        value="955">
+                                                    <label class="form-check-label" for="inst0">Academy of Interactive
+                                                        Entertainment</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst1"
+                                                        value="814">
+                                                    <label class="form-check-label" for="inst1">Academy of Interactive
+                                                        Technology</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst2"
+                                                        value="873">
+                                                    <label class="form-check-label" for="inst2">AIBI Higher
+                                                        Education</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst3"
+                                                        value="120">
+                                                    <label class="form-check-label" for="inst3">Australian Catholic
+                                                        University</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst4"
+                                                        value="921">
+                                                    <label class="form-check-label" for="inst4">Australian College of
+                                                        Applied Professions</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst5"
+                                                        value="857">
+                                                    <label class="form-check-label" for="inst5">Australian Institute of
+                                                        Music (AIM)</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst6"
+                                                        value="510">
+                                                    <label class="form-check-label" for="inst6">Box Hill
+                                                        Institute</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst7"
+                                                        value="888">
+                                                    <label class="form-check-label" for="inst7">Cairnmillar
+                                                        Institute</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst8"
+                                                        value="889">
+                                                    <label class="form-check-label" for="inst8">CG Spectrum
+                                                        Institute</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst9"
+                                                        value="130">
+                                                    <label class="form-check-label" for="inst9">Charles Sturt
+                                                        University</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst10"
+                                                        value="570">
+                                                    <label class="form-check-label" for="inst10">Chisholm
+                                                        Institute</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst11"
+                                                        value="864">
+                                                    <label class="form-check-label" for="inst11">Collarts (Australian
+                                                        College of the Arts)</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst12"
+                                                        value="170">
+                                                    <label class="form-check-label" for="inst12">CQUniversity</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst13"
+                                                        value="919">
+                                                    <label class="form-check-label" for="inst13">Deakin College</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst14"
+                                                        value="140">
+                                                    <label class="form-check-label" for="inst14">Deakin
+                                                        University</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst15"
+                                                        value="810">
+                                                    <label class="form-check-label" for="inst15">Eastern College
+                                                        Australia</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst16"
+                                                        value="960">
+                                                    <label class="form-check-label" for="inst16">Elly Lukas Beauty
+                                                        Therapy College</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst17"
+                                                        value="935">
+                                                    <label class="form-check-label" for="inst17">Endeavour College of
+                                                        Natural Health</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst18"
+                                                        value="370">
+                                                    <label class="form-check-label" for="inst18">Federation University
+                                                        Australia</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst19"
+                                                        value="590">
+                                                    <label class="form-check-label" for="inst19">Gordon (The)</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst20"
+                                                        value="887">
+                                                    <label class="form-check-label" for="inst20">Holmes
+                                                        Institute</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst21"
+                                                        value="610">
+                                                    <label class="form-check-label" for="inst21">Holmesglen</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst22"
+                                                        value="953">
+                                                    <label class="form-check-label" for="inst22">JMC Academy</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst23"
+                                                        value="530">
+                                                    <label class="form-check-label" for="inst23">Kangan
+                                                        Institute</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst24"
+                                                        value="954">
+                                                    <label class="form-check-label" for="inst24">La Trobe College
+                                                        Australia</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst25"
+                                                        value="210">
+                                                    <label class="form-check-label" for="inst25">La Trobe
+                                                        University</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst26"
+                                                        value="915">
+                                                    <label class="form-check-label" for="inst26">LCI Melbourne</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst27"
+                                                        value="947">
+                                                    <label class="form-check-label" for="inst27">Melbourne Institute of
+                                                        Technology</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst28"
+                                                        value="690">
+                                                    <label class="form-check-label" for="inst28">Melbourne
+                                                        Polytechnic</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst29"
+                                                        value="923">
+                                                    <label class="form-check-label" for="inst29">Monash College</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst30"
+                                                        value="280">
+                                                    <label class="form-check-label" for="inst30">Monash
+                                                        University</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst31"
+                                                        value="872">
+                                                    <label class="form-check-label" for="inst31">Northern College of the
+                                                        Arts and Technology</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst32"
+                                                        value="884">
+                                                    <label class="form-check-label" for="inst32">Ozford Institute of
+                                                        Higher Education</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst33"
+                                                        value="910">
+                                                    <label class="form-check-label" for="inst33">Photography Studies
+                                                        College (Melbourne)</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst34"
+                                                        value="320">
+                                                    <label class="form-check-label" for="inst34">RMIT University</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst35"
+                                                        value="997">
+                                                    <label class="form-check-label" for="inst35">SAE Creative Media
+                                                        Institute</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst36"
+                                                        value="340">
+                                                    <label class="form-check-label" for="inst36">Swinburne University of
+                                                        Technology</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst37"
+                                                        value="813">
+                                                    <label class="form-check-label" for="inst37">Torrens University
+                                                        Australia</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst38"
+                                                        value="380">
+                                                    <label class="form-check-label" for="inst38">University Of Melbourne
+                                                        (The)</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst39"
+                                                        value="430">
+                                                    <label class="form-check-label" for="inst39">Victoria
+                                                        University</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst40"
+                                                        value="963">
+                                                    <label class="form-check-label" for="inst40">Victorian Institute of
+                                                        Technology</label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="inst41"
+                                                        value="860">
+                                                    <label class="form-check-label" for="inst41">William Angliss
+                                                        Institute</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item ">
+                                        <div class="accordion-header" id="qualId-header"><button type="button"
+                                                class="accordion-button collapsed" data-bs-toggle="collapse"
+                                                data-bs-target="#qualId" aria-expanded="false" aria-controls="qualId">
+                                                <span
+                                                    class="material-symbols-outlined me-2 ">school</span>Qualifications
+                                            </button></div>
+                                        <div id="qualId" aria-labelledby="qualId-header"
+                                            class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="qual0"
+                                                        value="CF">
+                                                    <label for="qual0">
+                                                        Advanced Certificate</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="qual1"
+                                                        value="CA">
+                                                    <label for="qual1">
+                                                        Advanced Diploma</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="qual2"
+                                                        value="AP">
+                                                    <label for="qual2">
+                                                        Apprenticeship</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="qual3"
+                                                        value="DA">
+                                                    <label for="qual3">
+                                                        Associate Degree</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="qual4"
+                                                        value="CD">
+                                                    <label for="qual4">
+                                                        Associate Diploma</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="qual5"
+                                                        value="BG">
+                                                    <label for="qual5">
+                                                        Bachelor Degree</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="qual6"
+                                                        value="BH">
+                                                    <label for="qual6">
+                                                        Bachelor Degree (Honours)</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="qual7"
+                                                        value="C1">
+                                                    <label for="qual7">
+                                                        Certificate I</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="qual8"
+                                                        value="C2">
+                                                    <label for="qual8">
+                                                        Certificate II</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="qual9"
+                                                        value="C3">
+                                                    <label for="qual9">
+                                                        Certificate III</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="qual10"
+                                                        value="C4">
+                                                    <label for="qual10">
+                                                        Certificate IV</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="qual11"
+                                                        value="TD">
+                                                    <label for="qual11">
+                                                        Diploma</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="qual12"
+                                                        value="PH">
+                                                    <label for="qual12">
+                                                        Doctorate by coursework</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="qual13"
+                                                        value="PR">
+                                                    <label for="qual13">
+                                                        Doctorate by research</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="qual14"
+                                                        value="FS">
+                                                    <label for="qual14">
+                                                        Foundation Study</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="qual15"
+                                                        value="GC">
+                                                    <label for="qual15">
+                                                        Graduate Certificate</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="qual16"
+                                                        value="PG">
+                                                    <label for="qual16">
+                                                        Graduate Diploma</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="qual17"
+                                                        value="MH">
+                                                    <label for="qual17">
+                                                        Masters (Honours)</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="qual18"
+                                                        value="MA">
+                                                    <label for="qual18">
+                                                        Masters by coursework</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="qual19"
+                                                        value="MR">
+                                                    <label for="qual19">
+                                                        Masters by research</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="qual20"
+                                                        value="OP">
+                                                    <label for="qual20">
+                                                        Other Postgraduate Award</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item ">
+                                        <div class="accordion-header" id="interestId-header">
+                                            <button type="button" class="accordion-button collapsed"
+                                                data-bs-toggle="collapse" data-bs-target="#interestId"
+                                                aria-expanded="false" aria-controls="interestId"> <span
+                                                    class="material-symbols-outlined me-2 ">category</span>Area
+                                                of interest </button>
+                                        </div>
+                                        <div id="interestId" aria-labelledby="interestId-header"
+                                            class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="interest0"
+                                                        value="agriculture">
+                                                    <label for="interest0">
+                                                        Agriculture and environment</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="interest1"
+                                                        value="architecture">
+                                                    <label for="interest1">
+                                                        Architecture and building</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="interest2"
+                                                        value="business">
+                                                    <label for="interest2">
+                                                        Business and management</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="interest3"
+                                                        value="creative">
+                                                    <label for="interest3">
+                                                        Creative arts</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="interest4"
+                                                        value="engineering">
+                                                    <label for="interest4">
+                                                        Engineering</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="interest5"
+                                                        value="health">
+                                                    <label for="interest5">
+                                                        Health</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="interest6"
+                                                        value="humanities,">
+                                                    <label for="interest6">
+                                                        Humanities, culture and society</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="interest7"
+                                                        value="information">
+                                                    <label for="interest7">
+                                                        Information technology</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="interest8"
+                                                        value="law">
+                                                    <label for="interest8">
+                                                        Law</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="interest9"
+                                                        value="psychology">
+                                                    <label for="interest9">
+                                                        Psychology</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="interest10"
+                                                        value="science">
+                                                    <label for="interest10">
+                                                        Science and mathematics</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="interest11"
+                                                        value="social">
+                                                    <label for="interest11">
+                                                        Social work</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="interest12"
+                                                        value="teacher">
+                                                    <label for="interest12">
+                                                        Teacher education</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input me-1" id="interest13"
+                                                        value="tourism,">
+                                                    <label for="interest13">
+                                                        Tourism, hospitality, sport and personal services</label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-7 mt-4 ms-0">
+                        <section id="coursesList">
+                            <p><strong>32 courses match
+                                    your search.</strong><br> Refine your
+                                search using the search options. </p>
+                            <table id="tb" class="table table-cards">
+                                <thead>
+                                    <tr>
+                                        <th>Course title</th>
+                                        <th>Qualification</th>
+                                        <th>Institution and campus</th>
+                                        <th>Tags</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h3><a href="#/course/26/1201001">Accounting
+                                                    and Finance</a><button type="button" value="undefined"
+                                                    class="action-pref bg-transparent border-0 shadow-none material-symbols-outlined mso-36 mso-green mt-n1 me-1 float-end addCourse">add_circle</button>
+                                            </h3>
+                                        </td>
+                                        <td>Bachelor of Accounting and Finance: 3 years minimum duration</td>
+                                        <td>
+                                            <p class="preftags"><span class="inst-image me-2"><img
+                                                        src="/dist/images/logos/small/logo_120.png"
+                                                        alt="Australian Catholic University logo"></span><span
+                                                    class="inst-campus"><span class="inst">Australian
+                                                        Catholic University</span>
+                                                    <span class="campus">Melbourne</span></span></p>
+                                        </td>
+                                        <td><span class="badge-material fee-type badge-bluegrey me-1">CSP</span>
+                                            <span class="badge-material badge-indigo me-1 part-time">Part-time</span>
+                                            <span class="badge-material badge-indigo me-1 full-time">Full-time</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3><a href="#/course/26/1201110">Arts</a><button type="button"
+                                                    value="undefined"
+                                                    class="action-pref bg-transparent border-0 shadow-none material-symbols-outlined mso-36 mso-red mt-n1 me-1 float-end addCourse">cancel</button>
+                                            </h3>
+                                        </td>
+                                        <td>Bachelor of Arts: 3 years minimum duration</td>
+                                        <td>
+                                            <p class="preftags"><span class="inst-image me-2"><img
+                                                        src="/dist/images/logos/small/logo_120.png"
+                                                        alt="Australian Catholic University logo"></span><span
+                                                    class="inst-campus"><span class="inst">Australian
+                                                        Catholic University</span>
+                                                    <span class="campus">Melbourne</span></span></p>
+                                        </td>
+                                        <td><span class="badge-material fee-type badge-bluegrey me-1">CSP</span>
+                                            <span class="badge-material badge-indigo me-1 part-time">Part-time</span>
+                                            <span class="badge-material badge-indigo me-1 full-time">Full-time</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3><a href="#/course/26/1201102">Arts/Commerce</a><button type="button"
+                                                    value="undefined"
+                                                    class="action-pref bg-transparent border-0 shadow-none material-symbols-outlined mso-36 mso-green mt-n1 me-1 float-end addCourse">add_circle</button>
+                                            </h3>
+                                        </td>
+                                        <td><span class="qualification">Bachelor of Arts/Bachelor of Commerce: 4 years
+                                                minimum duration</span></td>
+                                        <td>
+                                            <p class="preftags"><span class="inst-image me-2"><img
+                                                        src="/dist/images/logos/small/logo_120.png"
+                                                        alt="Australian Catholic University logo"></span><span
+                                                    class="inst-campus"><span class="inst">Australian
+                                                        Catholic University</span>
+                                                    <span class="campus">Melbourne</span></span></p>
+                                        </td>
+                                        <td><span class="badge-material fee-type badge-bluegrey me-1">CSP</span>
+                                            <span class="badge-material badge-indigo me-1 part-time">Part-time</span>
+                                            <span class="badge-material badge-indigo me-1 full-time">Full-time</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3><a href="#/course/26/1201234">Arts/Global Studies</a><button
+                                                    type="button" value="undefined"
+                                                    class="action-pref bg-transparent border-0 shadow-none material-symbols-outlined mso-36 mso-green mt-n1 me-1 float-end addCourse">add_circle</button>
+                                            </h3>
+                                        </td>
+                                        <td><span class="qualification">Bachelor of Arts/Bachelor of Global Studies: 4
+                                                years minimum duration</span></td>
+                                        <td>
+                                            <p class="preftags"><span class="inst-image me-2"><img
+                                                        src="/dist/images/logos/small/logo_120.png"
+                                                        alt="Australian Catholic University logo"></span><span
+                                                    class="inst-campus"><span class="inst">Australian
+                                                        Catholic University</span>
+                                                    <span class="campus">Melbourne</span></span></p>
+                                        </td>
+                                        <td><span class="badge-material fee-type badge-bluegrey me-1">CSP</span>
+                                            <span class="badge-material badge-indigo me-1 part-time">Part-time</span>
+                                            <span class="badge-material badge-indigo me-1 full-time">Full-time</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3><a href="#/course/26/1201250">Arts/Laws</a><button type="button"
+                                                    value="undefined"
+                                                    class="action-pref bg-transparent border-0 shadow-none material-symbols-outlined mso-36 mso-red mt-n1 me-1 float-end addCourse">cancel</button>
+                                            </h3>
+                                        </td>
+                                        <td>Bachelor of Arts/Bachelor of Laws: 5 years minimum duration</td>
+                                        <td>
+                                            <p class="preftags"><span class="inst-image me-2"><img
+                                                        src="/dist/images/logos/small/logo_120.png"
+                                                        alt="Australian Catholic University logo"></span><span
+                                                    class="inst-campus"><span class="inst">Australian
+                                                        Catholic University</span>
+                                                    <span class="campus">Melbourne</span></span></p>
+                                        </td>
+                                        <td><span class="badge-material fee-type badge-bluegrey me-1">CSP</span>
+                                            <span class="badge-material badge-indigo me-1 part-time">Part-time</span>
+                                            <span class="badge-material badge-indigo me-1 full-time">Full-time</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <div class="container-fluid text-white bg-vtac-dark-blue footerwrapper">
+            <div class="container">
+                <div class="row pt-2 mb-0 justify-content-between align-items-center">
+                    <div class="col-md-3 col-12 text-center text-md-start"><img
+                            src="/dist/images/logos/vtac-logo-white.png" alt="VTAC logo" width="130px" height="65px">
+                    </div>
+                    <div class="col-md-9 col-12">
+                        <div class="connect text-center text-md-end my-2 my-lg-0"><a target="_blank"
+                                href="https://www.facebook.com/vtacguide"><img
+                                    src="/dist/images/icons/logo-facebook.png" alt="facebook" width="50px"
+                                    height="50px"></a><a target="_blank"
+                                href="https://www.instagram.com/vtacguide/"><img
+                                    src="/dist/images/icons/logo-instagram.png" alt="instagram" width="50px"
+                                    height="50px"></a><a target="_blank"
+                                href="https://www.youtube.com/user/vtacmedia"><img
+                                    src="/dist/images/icons/logo-youtube.png" alt="youtube" width="50px"
+                                    height="50px"></a><a target="_blank"
+                                href="https://au.linkedin.com/company/victorian-tertiary-admissions-centre-vtac-"><img
+                                    src="/dist/images/icons/logo-linkedin.png" alt="linkedin" width="50px"
+                                    height="50px"></a></div>
+                    </div>
+                </div>
+                <hr class="opacity-100 mt-1">
+                <div class="d-flex justify-content-evenly justify-content-xl-between flex-md-row flex-column">
+                    <div class="text-center text-xl-start">
+                        <h2 class="h5 text-uppercase fw-normal vtac-light-purple mt-4 mt-md-0">Policies</h2>
+                        <ul class="px-0 list-unstyled">
+                            <li class="py-1"><a target="_blank" href="https://vtac.edu.au/copyright/"
+                                    class="text-white text-decoration-none">Copyright</a></li>
+                            <li class="py-1"><a target="_blank" href="https://vtac.edu.au/privacy/"
+                                    class="text-white text-decoration-none">Privacy</a></li>
+                            <li class="py-1"><a target="_blank" href="https://vtac.edu.au/legals/"
+                                    class="text-white text-decoration-none">Legals</a></li>
+                            <li class="py-1"><a target="_blank" href="https://vtac.edu.au/accessibility-statement/"
+                                    class="text-white text-decoration-none">Accessibility Statement</a></li>
+                        </ul>
+                    </div>
+                    <!--<div class="col-lg-3 col-md-6 col-12 text-center text-xl-start">
+                    </div>-->
+                    <div class="pt-4 pt-md-0 text-center text-xl-start">
+                        <div class="row">
+                            <div class="col-12 col-xl-3">
+                                <div class="circle mx-auto text-center">
+                                    <span class="material-symbols-outlined mso-36">contact_support</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl-9 ps-4">
+                                <h2 class="h6 text-uppercase fw-normal vtac-light-purple mt-3 mt-xl-1">Help &amp;
+                                    support</h2>
+                                <p><a target="_blank" href="" class="text-decoration-none">Get help online.</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ps-xl-5 ms-xl-5 my-5 align-items-center">
+                    <div class="px-0 col-xl-1 col-12 me-0 me-xl-4 me-xxl-2" style="white-space: nowrap;">
+                        <div class="text-xl-end text-center"><img src="/dist/images/flags/aboriginal-flag.png"
+                                alt="Aboriginal flag" class="pe-2"><img
+                                src="/dist/images/flags/torres-strait-islander-flag.png"
+                                alt="Torres Strait Islander flag">
+                        </div>
+                    </div>
+                    <div class="col-xl-10 col-12">
+                        <p class="text-center text-xl-start mb-0 pt-2 pt-xl-0"><strong>We respectfully acknowledge the
+                                Traditional Owners of all the
+                                lands on which we work. We pay our respects to their cultures and Elders past and
+                                present.</strong></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="text-center">© Victorian Tertiary Admissions Centre Limited |
+                        ABN 19​&nbsp;667​&nbsp;966​&nbsp;038</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a class="float arrow-float-parent"><span
+            class="material-symbols-outlined arrow-float vtac-dark-blue text-white">backpack</span></a>
+
+    <script type="text/javascript" src="/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

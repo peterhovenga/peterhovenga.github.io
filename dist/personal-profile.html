@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>VTAC</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/dist/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/dist/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/dist/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/dist/images/site.webmanifest">
+    <link rel="icon" href="/dist/images/favicon.ico">
+
+    <!-- Material Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+
+    <header>
+        <nav id="mainnav" class="masthead navbar navbar-expand-xl navbar-light bg-white shadow-none">
+            <div class="container justify-content-between"> <a class="navbar-brand" href="/"><img
+                        src="/dist/images/logos/vtac-logo.png" alt="VTAC logo" width="130px" height="50px"></a>
+                <div>
+                    <div class="nav-item d-inline"><a role="button" class="ms-link" href=""><span
+                                class="d-xl-flex d-none nav-link">My profile</span><span class="d-xl-none"><span
+                                    class="material-symbols-outlined mso-30 mso-dark-blue">account_circle</span></span>
+                        </a> </div>
+                    <div class="nav-item d-inline d-xl-none align-middle"><a class="position-relative" href="/"
+                            role="button"><span class="d-xl-none"><span
+                                    class="material-symbols-outlined mso-30 mso-dark-blue">mail</span> <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">9<span
+                                        class="visually-hidden">unread messages</span>
+                                </span></span></a> </div>
+                    <button class="navbar-toggler align-middle mt-1" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                        aria-label="Toggle navigation"> <span class="material-symbols-outlined mso-36">menu</span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse mb-3 mb-xl-0" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0 container">
+                        <li class="nav-item"><a class="nav-link" href="#">Course preferences </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">My education </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">SEAS &amp; scholarships </a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Providing evidence </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Applicant statements </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Course offers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Nominees &amp; agents </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Get in touch </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item d-none d-xl-inline"><a class="position-relative" href="" role="button"><span
+                            class="material-symbols-outlined mso-30 mso-dark-blue">mail</span><span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">9<span
+                                class="visually-hidden">unread messages</span>
+                        </span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main site navigation -->
+    <section id="heading" class="container-fluid px-0" style="background-color:#F0F3F9">
+        <div class="container-fluid px-0 mainheading">
+            <h1 class="mt-0 mb-2 container">My profile</h1>
+        </div>
+    </section>
+    <main id="maincontent" class="container-fluid">
+        <article id="main" class="container">
+            <section id="contentbody">
+                <h2>Personal details</h2>
+                <p>You will need to submit a change name request to modify the names entered below. You will need to
+                    upload proof of name.
+                </p>
+                <div class="col-md-8 col-lg-6">
+                    <div class="form-group mt-2 pl-2">
+                        <fieldset>
+                            <label for="" class="form-label">First or given name</label>
+                            <input type="text" class="form-control" id="" value="Akwasi" required disabled>
+                            <div class="invalid-feedback">
+                                Please enter a first or given name. Enter your name in both first and last name fields
+                                if you only have one legal name.
+                            </div>
+                            <label for="" class="form-label">Middle or second given name <span
+                                    class="text-muted font-weight-normal">(if any)</span></label>
+                            <input type="text" class="form-control" id="" disabled>
+                            <label for="" class="form-label">Last or family name</label>
+                            <input type="text" class="form-control" id="" value="Goff" required disabled>
+                            <div class="invalid-feedback">
+                                Please enter a last or family name. Enter your name in both first and last name fields
+                                if you only have one legal name.
+                            </div>
+                        </fieldset>
+                        <div class="form-group mt-5">
+                            <button type="submit" class="btn btn-primary">Change name</button>
+                        </div>
+                        <div class="form-group mt-3 pl-2">
+                            <label for="" class="form-label">Preferred name <span
+                                    class="text-muted font-weight-normal">(optional)</span></label>
+                            <input type="text" class="form-control" id="">
+                            <p><small class="text-muted">VTAC will only use this name in correspondence</small></p>
+                        </div>
+                    </div>
+                    <div class="form-group my-5 pl-2">
+                        <fieldset>
+                            <legend>Have you started or completed any secondary or tertiary studies under another name?
+                            </legend>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" id="otherNameYes" name="otherName" class="form-check-input"
+                                    value="yes">
+                                <label for="otherNameYes" class="form-check-label mr-2">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" id="otherNameNo" name="otherName" class="form-check-input"
+                                    value="no">
+                                <label for="otherNameNo" class="form-check-label">No</label>
+                            </div>
+                        </fieldset>
+                        <fieldset id="otherName1" class="d-none mt-3 p-0">
+                            <legend>Other name</legend>
+                            <label for="" class="form-label">First or given name</label>
+                            <input type="text" class="form-control" id="otherName1First">
+                            <div class="invalid-feedback">
+                                Please enter a first or given name. Enter your name in both first and last name fields
+                                if you only have one legal name.
+                            </div>
+                            <label for="" class="form-label">Middle or second given name <span
+                                    class="text-muted font-weight-normal">(optional)</span></label>
+                            <input type="text" class="form-control" id="">
+                            <label for="" class="form-label">Last or family name</label>
+                            <input type="text" class="form-control" id="otherName1Last">
+                            <div class="invalid-feedback">
+                                Please enter a last or family name. Enter your name in both first and last name fields
+                                if you only have one legal name.
+                            </div>
+                            <p class="mt-4"><a href=""><i class="material-icons md-36">add_circle_outline</i> I need to
+                                    add another name</a></p>
+                        </fieldset>
+                        <div class="form-group mt-4 pl-2"><label for="" class="form-label">Date of
+                                birth</label>
+                            <input type="date" class="form-control" value="2003-12-10" id="" required disabled>
+                            <div class="invalid-feedback">
+                                Please enter your date of birth.
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Change password</h3>
+                    <div class="form-group mt-4 pl-2">
+                        <label for="" class="form-label w-100 pe-2">Old password<span
+                                class="float-end material-symbols-outlined">visibility</span></label>
+                        <input type="password" class="form-control" id=""
+                            pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])\S{8,}" required>
+                        <div class="invalid-feedback mb-2">
+                            Please enter a valid password.
+                        </div>
+                        <label for="" class="form-label w-100 pe-2">Create password<span
+                                class="float-end material-symbols-outlined">visibility</span></label>
+                        <input type="password" class="form-control" id=""
+                            pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])\S{8,}" required>
+                        <div class="invalid-feedback mb-2">
+                            Please enter a valid password.
+                        </div>
+                        <label for="" class="form-label w-100 pe-2">Confirm password<span
+                                class="float-end material-symbols-outlined">visibility</span></label>
+                        <input type="password" class="form-control" id=""
+                            pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])\S{8,}" required>
+                        <div class="invalid-feedback mb-2">
+                            Please enter a valid password.
+                        </div>
+                    </div>
+                    <h3>About you <a data-toggle="modal" data-target="#supportModal">
+                            <span class="material-symbols-outlined md-blue md-24 mt-n2">help_outline</span></a></h3>
+                    <p>VTAC collects statistics on behalf of the Department of Education and Training, and
+                        participating institutions. VTAC will also use this information for SEAS and equity
+                        scholarships.</p>
+                    <div class="form-group pl-2">
+                        <fieldset>
+                            <legend>Are you of Aboriginal Australian or Torres Strait Islander descent?</legend>
+
+                            <div class="form-check">
+                                <input type="checkbox" id="" name="ATSI" class="form-check-input" value="yesA" required>
+                                <label for="" class="form-check-label">Aboriginal Australian</label>
+                            </div>
+                            <input type="checkbox" id="" name="ATSI" class="form-check-input" value="yesATSI" required>
+                            <label for="" class="form-check-label">Torres
+                                Strait
+                                Islander</label>
+                            <div class="form-check">
+                                <input type="checkbox" id="" name="ATSI" class="form-check-input" value="no" required>
+                                <label for="" class="form-check-label">Neither</label>
+                                <div class="invalid-feedback mt-4 ml-n3">
+                                    Please indicate if you are of Aboriginal Australian or Torres Strait Islander
+                                    descent.
+                                </div>
+                            </div>
+
+                            <div id="showATSI" class="form-row mt-4 p-1 d-none">
+                                <label for="indigenousCommunity" class="form-label">Name and location of your
+                                    indigenous community</label>
+                                <input type="text" class="form-control" id="indigenousCommunity" required>
+                                <div class="invalid-feedback mt-2 pl-0">
+                                    Please enter the name and location of your community.
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <fieldset>
+                        <legend class="mt-4 mb-0">Gender: how do you identify? <span
+                                class="text-muted font-weight-normal"></span>
+                        </legend>
+                        <div class="form-check">
+                            <input type="radio" id="f" name="gender" class="form-check-input" value="">
+                            <label for="f" class="form-check-label">Woman</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" id="m" name="gender" class="form-check-input" value="">
+                            <label for="m" class="form-check-label">Man</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" id="" name="gender" class="form-check-input" value="">
+                            <label for="" class="form-check-label">I use a different term (please specify)</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" id="" name="gender" class="form-check-input" value="">
+                            <label for="" class="form-check-label">I prefer not to say</label>
+                        </div>
+                        <div class="form-group mt-2 pl-2">
+                            <label for="" class="form-label">I identify as:</label>
+                            <input type="text" class="form-control" id="">
+                        </div>
+                    </fieldset>
+                    <div class="form-group mt-5 pl-2">
+                        <fieldset>
+                            <legend>Highest level of education completed by your parents or guardians</legend>
+                            <p class="mb-0"><small class="text-muted">If you have more than two, answer for the two you
+                                    have spent
+                                    the most time with</small></p>
+                            <div class="form-check ml-1"><input type="checkbox" id="noGuardianEdu" name="noGuardianEdu"
+                                    class="form-check-input" value="none" required>
+                                <label for="noGuardianEdu" class="form-check-label">I do not have a parent or
+                                    guardian</label>
+                                <div class="invalid-feedback mt-2 ml-n4">
+                                    Please indicate if you have no parent or guardian. Otherwise, select their education
+                                    level below.
+                                </div>
+                            </div>
+
+                            <label for="firstGuardianEdu" class="form-label mt-4">First parent or guardian</label>
+                            <select id="firstGuardianEdu" name="firstGuardianEdu" class="guardians form-select"
+                                required>
+                                <option value="0">Select highest level of education</option>
+                                <option value="20">Postgraduate qualification</option>
+                                <option value="21">Bachelor degree</option>
+                                <option value="22">Certificate, Associate Degree or Diploma</option>
+                                <option value="23">Completed senior secondary school or equivalent</option>
+                                <option value="24">Attempted senior secondary studies but did not complete</option>
+                                <option value="25">Completed Year 10 studies or equivalent</option>
+                                <option value="26">Stopped school before Year 10</option>
+                                <option value="49">I don't know</option>
+                                <option value="">Does not apply</option>
+                            </select>
+
+                            <label for="secondGuardianEdu" class="form-label mt-2 text-muted">Second parent or
+                                guardian (if applicable)</label>
+                            <select id="secondGuardianEdu" name="secondGuardianEdu" class="guardians form-select"
+                                disabled>
+                                <option value="0">Select highest level of education</option>
+                                <option value="20">Postgraduate qualification</option>
+                                <option value="21">Bachelor degree</option>
+                                <option value="22">Certificate, Associate Degree or Diploma</option>
+                                <option value="23">Completed senior secondary school or equivalent</option>
+                                <option value="24">Attempted senior secondary studies but did not complete</option>
+                                <option value="25">Completed Year 10 studies or equivalent</option>
+                                <option value="26">Stopped school before Year 10</option>
+                                <option value="49">I don't know</option>
+                                <option value="">Does not apply</option>
+                            </select>
+                            <fieldset class="mt-3">
+                                <legend><small class="font-weight-bold">Do you have any siblings that have
+                                        attended university?</small></legend>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" id="siblingEduY" name="siblingEdu" class="form-check-input"
+                                        value="Y">
+                                    <label for="siblingEduY" class="form-check-label">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" id="siblingEduN" name="siblingEdu" class="form-check-input"
+                                        value="N">
+                                    <label for="siblingEduN" class="form-check-label">No</label>
+                                </div>
+                            </fieldset>
+                    </div>
+                    <div class="form-group mt-5 pl-2">
+                        <fieldset>
+                            <legend>Are you a current or former member of the Australian Defence Forces, including the
+                                Reserves?</legend>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" id="defenceInd1" name="defenceInd" class="form-check-input"
+                                    value="Y">
+                                <label for="" class="form-check-label">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" id="defenceInd2" name="defenceInd" class="form-check-input"
+                                    value="N">
+                                <label for="" class="form-check-label">No</label>
+                            </div>
+                        </fieldset>
+                        <div id="defenceInfoDiv" class="alert alert-info mt-3 p-0 d-none" role="alert">
+                            <div class="d-table-row">
+                                <div class="d-table-cell bg-info px-2 align-middle"><i
+                                        class="material-icons mb-1">info</i>
+                                </div>
+                                <div class="d-table-cell px-3 pt-3 pb-0">
+                                    <p>You may be contacted by one or more institutions to which you have applied, to
+                                        discuss your study options and any additional assistance you may require.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="mt-4 pl-2 form-group">
+                        <h3>Contact details</h3>
+                        <div class="form-row">
+                            <div class="pl-0 col-xl-4 col-lg-5 col-md-6">
+                                <div id="mobileContact" class="phoneContact">
+                                    <label for="application.personDetails.mobilePhone" class="form-label">Mobile
+                                        number</label>
+                                    <input id="application.personDetails.mobilePhone"
+                                        name="application.personDetails.mobilePhone" type="text"
+                                        class="form-control phone-group" value="" maxlength="16" required>
+                                    <div class="invalid-feedback mb-2">
+                                        Please enter your mobile number.
+                                    </div>
+                                </div>
+                                <div id="homeContact" class="d-none phoneContact">
+                                    <label for="application.personDetails.homePhone" class="form-label sr-only">Home
+                                        phone</label>
+                                    <input id="application.personDetails.homePhone"
+                                        name="application.personDetails.homePhone" type="text"
+                                        class="form-control phone-group" value="" maxlength="16">
+                                    <div class="invalid-feedback mb-2">
+                                        Please enter your home phone number.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mt-4 pl-2">
+                        <label for="" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="" required>
+                        <div class="invalid-feedback mb-2">
+                            Please provide a valid email address.
+                        </div>
+                        <p class="text-muted mb-1"><small>We require a valid email address for account registration and
+                                verification.</small></p>
+                    </div>
+                    <div class="form-group mt-4 pl-2">
+                        <h4>Living location</h4>
+                        <fieldset>
+                            <legend> What is your current living location?</legend>
+                            <label for="address[1].country.id" class="form-label mt-1">Country</label>
+                            <select id="address1.countryCode.id" name="address[1].countryCode.id"
+                                class="resichange form-control" required>
+                                <option value="">Select</option>
+                                <option value="1100">Australia</option>
+                                <option value="1601">Adelie Land (France)</option>
+                                <option value="7201">Afghanistan</option>
+                                <option value="2408">Aland Islands</option>
+                                <option value="3201">Albania</option>
+                                <option value="4101">Algeria</option>
+                                <option value="3101">Andorra</option>
+                                <option value="9201">Angola</option>
+                                <option value="8401">Anguilla</option>
+                                <option value="8402">Antigua and Barbuda</option>
+                                <option value="8201">Argentina</option>
+                                <option value="1602">Argentinian Antarctic Territory</option>
+                                <option value="7202">Armenia</option>
+                                <option value="8403">Aruba</option>
+                                <option value="1603">Australian Antarctic Territory</option>
+                                <option value="1199">Australian External Territories, nec</option>
+                                <option value="2301">Austria</option>
+                                <option value="7203">Azerbaijan</option>
+                                <option value="8404">Bahamas</option>
+                                <option value="4201">Bahrain</option>
+                                <option value="7101">Bangladesh</option>
+                                <option value="8405">Barbados</option>
+                                <option value="3301">Belarus</option>
+                                <option value="2302">Belgium</option>
+                                <option value="8301">Belize</option>
+                                <option value="9101">Benin</option>
+                                <option value="8101">Bermuda</option>
+                                <option value="7102">Bhutan</option>
+                                <option value="8202">Bolivia</option>
+                                <option value="8433">Bonaire, Sint Eustatius and Saba</option>
+                                <option value="3202">Bosnia and Herzegovina</option>
+                                <option value="9202">Botswana</option>
+                                <option value="8203">Brazil</option>
+                                <option value="1604">British Antarctic Territory</option>
+                                <option value="5201">Brunei Darussalam</option>
+                                <option value="3203">Bulgaria</option>
+                                <option value="9102">Burkina Faso</option>
+                                <option value="5101">Burma (Myanmar)</option>
+                                <option value="9203">Burundi</option>
+                                <option value="5102">Cambodia</option>
+                                <option value="9103">Cameroon</option>
+                                <option value="8102">Canada</option>
+                                <option value="9104">Cabo Verde</option>
+                                <option value="8406">Cayman Islands</option>
+                                <option value="9105">Central African Republic</option>
+                                <option value="9106">Chad</option>
+                                <option value="8204">Chile</option>
+                                <option value="1605">Chilean Antarctic Territory</option>
+                                <option value="6101">China</option>
+                                <option value="8205">Colombia</option>
+                                <option value="9204">Comoros</option>
+                                <option value="9108">Congo, Democratic Republic of</option>
+                                <option value="9107">Congo, Republic of</option>
+                                <option value="1501">Cook Islands</option>
+                                <option value="8302">Costa Rica</option>
+                                <option value="9111">Cote d'Ivoire</option>
+                                <option value="3204">Croatia</option>
+                                <option value="8407">Cuba</option>
+                                <option value="8434">Curacao</option>
+                                <option value="3205">Cyprus</option>
+                                <option value="3302">Czechia</option>
+                                <option value="2401">Denmark</option>
+                                <option value="9205">Djibouti</option>
+                                <option value="8408">Dominica</option>
+                                <option value="8411">Dominican Republic</option>
+                                <option value="8206">Ecuador</option>
+                                <option value="4102">Egypt</option>
+                                <option value="8303">El Salvador</option>
+                                <option value="2102">England</option>
+                                <option value="9112">Equatorial Guinea</option>
+                                <option value="9206">Eritrea</option>
+                                <option value="3303">Estonia</option>
+                                <option value="9207">Ethiopia</option>
+                                <option value="8207">Falkland Islands</option>
+                                <option value="2402">Faroe Islands</option>
+                                <option value="1502">Fiji</option>
+                                <option value="2403">Finland</option>
+                                <option value="2303">France</option>
+                                <option value="8208">French Guiana</option>
+                                <option value="1503">French Polynesia</option>
+                                <option value="9113">Gabon</option>
+                                <option value="9114">Gambia</option>
+                                <option value="4202">Gaza Strip and West Bank</option>
+                                <option value="7204">Georgia</option>
+                                <option value="2304">Germany</option>
+                                <option value="9115">Ghana</option>
+                                <option value="3102">Gibraltar</option>
+                                <option value="3207">Greece</option>
+                                <option value="2404">Greenland</option>
+                                <option value="8412">Grenada</option>
+                                <option value="8413">Guadeloupe</option>
+                                <option value="1401">Guam</option>
+                                <option value="8304">Guatemala</option>
+                                <option value="2107">Guernsey</option>
+                                <option value="9116">Guinea</option>
+                                <option value="9117">Guinea-Bissau</option>
+                                <option value="8211">Guyana</option>
+                                <option value="8414">Haiti</option>
+                                <option value="3103">Holy See</option>
+                                <option value="8305">Honduras</option>
+                                <option value="6102">Hong Kong</option>
+                                <option value="3304">Hungary</option>
+                                <option value="2405">Iceland</option>
+                                <option value="7103">India</option>
+                                <option value="5202">Indonesia</option>
+                                <option value="4203">Iran</option>
+                                <option value="4204">Iraq</option>
+                                <option value="2201">Ireland</option>
+                                <option value="2103">Isle of Man</option>
+                                <option value="4205">Israel</option>
+                                <option value="3104">Italy</option>
+                                <option value="8415">Jamaica</option>
+                                <option value="6201">Japan</option>
+                                <option value="2108">Jersey</option>
+                                <option value="4206">Jordan</option>
+                                <option value="7205">Kazakhstan</option>
+                                <option value="9208">Kenya</option>
+                                <option value="1402">Kiribati</option>
+                                <option value="6202">Korea, Dem Rep of (North)</option>
+                                <option value="6203">Korea, Republic of (South)</option>
+                                <option value="3216">Kosovo</option>
+                                <option value="4207">Kuwait</option>
+                                <option value="7206">Kyrgyzstan</option>
+                                <option value="5103">Laos</option>
+                                <option value="3305">Latvia</option>
+                                <option value="4208">Lebanon</option>
+                                <option value="9211">Lesotho</option>
+                                <option value="9118">Liberia</option>
+                                <option value="4103">Libya</option>
+                                <option value="2305">Liechtenstein</option>
+                                <option value="3306">Lithuania</option>
+                                <option value="2306">Luxembourg</option>
+                                <option value="6103">Macau</option>
+                                <option value="9212">Madagascar</option>
+                                <option value="9213">Malawi</option>
+                                <option value="5203">Malaysia</option>
+                                <option value="7104">Maldives</option>
+                                <option value="9121">Mali</option>
+                                <option value="3105">Malta</option>
+                                <option value="1403">Marshall Islands</option>
+                                <option value="8416">Martinique</option>
+                                <option value="9122">Mauritania</option>
+                                <option value="9214">Mauritius</option>
+                                <option value="9215">Mayotte</option>
+                                <option value="8306">Mexico</option>
+                                <option value="1404">Micronesia, Fed States of</option>
+                                <option value="3208">Moldova</option>
+                                <option value="2307">Monaco</option>
+                                <option value="6104">Mongolia</option>
+                                <option value="3214">Montenegro</option>
+                                <option value="8417">Montserrat</option>
+                                <option value="4104">Morocco</option>
+                                <option value="9216">Mozambique</option>
+                                <option value="9217">Namibia</option>
+                                <option value="1405">Nauru</option>
+                                <option value="7105">Nepal</option>
+                                <option value="2308">Netherlands</option>
+                                <option value="1301">New Caledonia</option>
+                                <option value="1201">New Zealand</option>
+                                <option value="8307">Nicaragua</option>
+                                <option value="9123">Niger</option>
+                                <option value="9124">Nigeria</option>
+                                <option value="1504">Niue</option>
+                                <option value="1102">Norfolk Island</option>
+                                <option value="3206">North Macedonia</option>
+                                <option value="2104">Northern Ireland</option>
+                                <option value="1406">Northern Mariana Islands</option>
+                                <option value="2406">Norway</option>
+                                <option value="4211">Oman</option>
+                                <option value="7106">Pakistan</option>
+                                <option value="1407">Palau</option>
+                                <option value="8308">Panama</option>
+                                <option value="1302">Papua New Guinea</option>
+                                <option value="8212">Paraguay</option>
+                                <option value="8213">Peru</option>
+                                <option value="5204">Philippines</option>
+                                <option value="1513">Pitcairn Islands</option>
+                                <option value="3307">Poland</option>
+                                <option value="1599">Polynesia (excludes Hawaii), nec</option>
+                                <option value="3106">Portugal</option>
+                                <option value="8421">Puerto Rico</option>
+                                <option value="4212">Qatar</option>
+                                <option value="1606">Queen Maud Land (Norway)</option>
+                                <option value="9218">Reunion</option>
+                                <option value="3211">Romania</option>
+                                <option value="1607">Ross Dependency (New Zealand)</option>
+                                <option value="3308">Russian Federation</option>
+                                <option value="9221">Rwanda</option>
+                                <option value="1505">Samoa</option>
+                                <option value="1506">Samoa, American</option>
+                                <option value="3107">San Marino</option>
+                                <option value="9125">Sao Tome and Principe</option>
+                                <option value="4213">Saudi Arabia</option>
+                                <option value="2105">Scotland</option>
+                                <option value="9126">Senegal</option>
+                                <option value="3215">Serbia</option>
+                                <option value="9223">Seychelles</option>
+                                <option value="9127">Sierra Leone</option>
+                                <option value="5205">Singapore</option>
+                                <option value="8435">Sint Maarten (Dutch part)</option>
+                                <option value="3311">Slovakia</option>
+                                <option value="3212">Slovenia</option>
+                                <option value="1303">Solomon Islands</option>
+                                <option value="9224">Somalia</option>
+                                <option value="9225">South Africa</option>
+                                <option value="8299">South America, nec</option>
+                                <option value="4111">South Sudan</option>
+                                <option value="9299">Southern and East Africa</option>
+                                <option value="3108">Spain</option>
+                                <option value="4108">Spanish North Africa</option>
+                                <option value="7107">Sri Lanka</option>
+                                <option value="8431">St Barthelemy</option>
+                                <option value="9222">St Helena</option>
+                                <option value="8422">St Kitts and Nevis</option>
+                                <option value="8423">St Lucia</option>
+                                <option value="8432">St Martin (French part)</option>
+                                <option value="8103">St Pierre and Miquelon</option>
+                                <option value="8424">St Vincent and the Grenadines</option>
+                                <option value="4105">Sudan</option>
+                                <option value="8214">Suriname</option>
+                                <option value="9226">Eswatini</option>
+                                <option value="2407">Sweden</option>
+                                <option value="2311">Switzerland</option>
+                                <option value="4214">Syria</option>
+                                <option value="6105">Taiwan</option>
+                                <option value="7207">Tajikistan</option>
+                                <option value="9227">Tanzania</option>
+                                <option value="5104">Thailand</option>
+                                <option value="5206">Timor-Leste</option>
+                                <option value="9128">Togo</option>
+                                <option value="1507">Tokelau</option>
+                                <option value="1508">Tonga</option>
+                                <option value="8425">Trinidad and Tobago</option>
+                                <option value="4106">Tunisia</option>
+                                <option value="4215">Turkey</option>
+                                <option value="7208">Turkmenistan</option>
+                                <option value="8426">Turks and Caicos Islands</option>
+                                <option value="1511">Tuvalu</option>
+                                <option value="9228">Uganda</option>
+                                <option value="3312">Ukraine</option>
+                                <option value="4216">United Arab Emirates</option>
+                                <option value="8104">United States of America</option>
+                                <option value="8215">Uruguay</option>
+                                <option value="7211">Uzbekistan</option>
+                                <option value="1304">Vanuatu</option>
+                                <option value="8216">Venezuela</option>
+                                <option value="5105">Vietnam</option>
+                                <option value="8427">Virgin Islands (British)</option>
+                                <option value="8428">Virgin Islands (U.S.)</option>
+                                <option value="2106">Wales</option>
+                                <option value="1512">Wallis and Futuna</option>
+                                <option value="4107">Western Sahara</option>
+                                <option value="4217">Yemen</option>
+                                <option value="9231">Zambia</option>
+                                <option value="9232">Zimbabwe</option>
+                            </select>
+                            <div class="invalid-feedback mt-2">
+                                Please choose the country where you live.
+                            </div>
+                            <label class="form-label" for="address1.line1">Address line 1</label>
+                            <input class="form-control OSAddress" id="address1.address1" name="address[1].address1"
+                                type="text" class="resichange" value="" maxlength="40">
+                            <div class="invalid-feedback">
+                                Please enter your street address.
+                            </div>
+                            <label class="form-label" for="address1.line2">Address line 2 <span
+                                    class="optional">(optional)</span></label>
+                            <input class="form-control OSAddress" id="address1.address2" name="address[1].address2"
+                                type="text" class="resichange" value="" maxlength="40">
+                            <div class="form-group">
+                                <label class="form-label" for="address1.suburb">Suburb or town</label>
+                                <input class="form-control OSAddress" id="address1.suburb" name="address[1].suburb"
+                                    type="text" class="resichange" value="" maxlength="25">
+                                <div class="invalid-feedback">
+                                    Please enter the suburb or town where you live.
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group OSAddressFields col-md-6">
+                                    <label class="form-label" for="address1.province">State or province</label>
+                                    <input class="form-control OSAddress" id="address1.stateProvince"
+                                        name="address[1].stateProvince" type="text" class="" value="" maxlength="14">
+                                    <div class="invalid-feedback">
+                                        Please enter your state or province.
+                                    </div>
+                                </div>
+                                <div class="form-group OSAddressFields col-md-3">
+                                    <label class="form-label" for="address1.zipcode">Postcode</label>
+                                    <input class="form-control OSAddress" id="address1.zipPostcode"
+                                        name="address[1].zipPostcode" type="text" class="" value="" size="10"
+                                        maxlength="10">
+                                    <div class="invalid-feedback">
+                                        Please enter your zipcode.
+                                    </div>
+                                </div>
+
+                            </div>
+                        </fieldset>
+                        <fieldset class="mt-4">
+                            <legend>Time living at this address</legend>
+                            <div class="row">
+                                <div class="form-group col-sm-2">
+                                    <label class="form-label"
+                                        for="application.personDetails.yearsAtResidency">Years</label>
+                                    <input class="form-control timeAtResidency"
+                                        id="application.personDetails.yearsAtResidency"
+                                        name="application.personDetails.yearsAtResidency" type="text" value="" size="3"
+                                        maxlength="3">
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <label class="form-label"
+                                        for="application.personDetails.monthsAtResidency">Months</label>
+                                    <input class="form-control timeAtResidency"
+                                        id="application.personDetails.monthsAtResidency"
+                                        name="application.personDetails.monthsAtResidency" type="text" value="" size="2"
+                                        maxlength="2">
+                                </div>
+                                <div class="invalid-feedback mt-2">
+                                    Please enter the amount of time spent at the address where you live.
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="form-check mt-4">
+                            <input type="checkbox" id="mailing" name="mailing" class="form-check-input"
+                                value="differentMailing"><label for="mailing" class="form-check-label ps-2"><strong>I
+                                    have a different mailing address</strong></label>
+                        </div>
+                    </div>
+                    <div class="form-group mt-4 pl-2">
+                        <h4>Future living location</h4>
+                        <fieldset class="mt-3">
+                            <legend><small class="font-weight-bold">Will you need to move to undertake a tertiary
+                                    course, or have already you moved?</small></legend>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" id="moveY" name="move" class="form-check-input" value="Y">
+                                <label for="moveY" class="form-check-label">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" id="moveN" name="move" class="form-check-input" value="N">
+                                <label for="moveN" class="form-check-label">No</label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="mt-3">
+                            <legend><small class="font-weight-bold">Do you plan to reside on-campus in 2025?</small>
+                            </legend>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" id="onCampusY" name="onCampus" class="form-check-input" value="Y">
+                                <label for="onCampusY" class="form-check-label">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" id="onCampusN" name="onCampus" class="form-check-input" value="N">
+                                <label for="onCampusN" class="form-check-label">No</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form-group mt-4 pl-2">
+                        <h4>Information permissions</h4>
+                        <p>You change your permissions in your account at any time.</p>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="marketing" checked>
+                            <label class="form-check-label" for="marketing">Additional services and marketing </label>
+                            <p><small class="text-muted">VTAC may use my email address to inform me about additional
+                                    services provided by VTAC or partner organisations.</small></p>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="research" checked>
+                            <label class="form-check-label" for="research">Use of anonymous sensitive information for
+                                research</label>
+                            <p><small class="text-muted"> VTAC may also disclose aggregated and deidentified sensitive
+                                    information to third parties
+                                    for research purposes.</small></p>
+
+                        </div>
+                    </div>
+                    <div class="form-group my-5">
+                        <button type="submit" class="btn btn-primary" disabled>Save changes</button>
+                        <button type="button" class="btn btn-outline-primary" disabled>Cancel</button>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <div class="container-fluid text-white bg-vtac-dark-blue footerwrapper">
+            <div class="container">
+                <div class="row pt-2 mb-0 justify-content-between align-items-center">
+                    <div class="col-md-3 col-12 text-center text-md-start"><img
+                            src="/dist/images/logos/vtac-logo-white.png" alt="VTAC logo" width="130px" height="65px">
+                    </div>
+                    <div class="col-md-9 col-12">
+                        <div class="connect text-center text-md-end my-2 my-lg-0"><a target="_blank"
+                                href="https://www.facebook.com/vtacguide"><img
+                                    src="/dist/images/icons/logo-facebook.png" alt="facebook" width="50px"
+                                    height="50px"></a><a target="_blank"
+                                href="https://www.instagram.com/vtacguide/"><img
+                                    src="/dist/images/icons/logo-instagram.png" alt="instagram" width="50px"
+                                    height="50px"></a><a target="_blank"
+                                href="https://www.youtube.com/user/vtacmedia"><img
+                                    src="/dist/images/icons/logo-youtube.png" alt="youtube" width="50px"
+                                    height="50px"></a><a target="_blank"
+                                href="https://au.linkedin.com/company/victorian-tertiary-admissions-centre-vtac-"><img
+                                    src="/dist/images/icons/logo-linkedin.png" alt="linkedin" width="50px"
+                                    height="50px"></a></div>
+                    </div>
+                </div>
+                <hr class="opacity-100 mt-1">
+                <div class="d-flex justify-content-evenly justify-content-xl-between flex-md-row flex-column">
+                    <div class="text-center text-xl-start">
+                        <h2 class="h5 text-uppercase fw-normal vtac-light-purple mt-4 mt-md-0">Policies</h2>
+                        <ul class="px-0 list-unstyled">
+                            <li class="py-1"><a target="_blank" href="https://vtac.edu.au/copyright/"
+                                    class="text-white text-decoration-none">Copyright</a></li>
+                            <li class="py-1"><a target="_blank" href="https://vtac.edu.au/privacy/"
+                                    class="text-white text-decoration-none">Privacy</a></li>
+                            <li class="py-1"><a target="_blank" href="https://vtac.edu.au/legals/"
+                                    class="text-white text-decoration-none">Legals</a></li>
+                            <li class="py-1"><a target="_blank" href="https://vtac.edu.au/accessibility-statement/"
+                                    class="text-white text-decoration-none">Accessibility Statement</a></li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 pt-md-0 text-center text-xl-start">
+                        <div class="row">
+                            <div class="col-12 col-xl-3">
+                                <div class="circle mx-auto text-center">
+                                    <span class="material-symbols-outlined mso-36">contact_support</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl-9 ps-4">
+                                <h2 class="h6 text-uppercase fw-normal vtac-light-purple mt-3 mt-xl-1">Help &amp;
+                                    support</h2>
+                                <p><a target="_blank" href="" class="text-decoration-none">Get help online.</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ps-xl-5 ms-xl-5 my-5 align-items-center">
+                    <div class="px-0 col-xl-1 col-12 me-0 me-xl-4 me-xxl-2" style="white-space: nowrap;">
+                        <div class="text-xl-end text-center"><img src="/dist/images/flags/aboriginal-flag.png"
+                                alt="Aboriginal flag" class="pe-2"><img
+                                src="/dist/images/flags/torres-strait-islander-flag.png"
+                                alt="Torres Strait Islander flag">
+                        </div>
+                    </div>
+                    <div class="col-xl-10 col-12">
+                        <p class="text-center text-xl-start mb-0 pt-2 pt-xl-0"><strong>We respectfully acknowledge the
+                                Traditional Owners of all the
+                                lands on which we work. We pay our respects to their cultures and Elders past and
+                                present.</strong></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="text-center">© Victorian Tertiary Admissions Centre Limited |
+                        ABN 19​&nbsp;667​&nbsp;966​&nbsp;038</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

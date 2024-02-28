@@ -1,0 +1,157 @@
+{
+  "keydates": [
+    {
+      "date": "2024/07/31",
+      "title": "Course applications open",
+      "time": "9:00",
+      "cy12d": true,
+      "cy12i": true,
+      "ny12": true,
+      "get": true,
+      "exclude_states": "",
+      "tag": "equity"
+    },
+    {
+      "date": "2024/07/31",
+      "title": "SEAS and scholarships applications open",
+      "time": "9:00",
+      "cy12d": true,
+      "cy12i": true,
+      "ny12": true,
+      "get": true,
+      "exclude_states": "",
+      "tag": "equity"
+    },
+    {
+      "date": "2024/09/30",
+      "title": "Timely course applications close",
+      "time": "17:00",
+      "cy12d": true,
+      "cy12i": true,
+      "ny12": true,
+      "get": true,
+      "exclude_states": "",
+      "tag": "course"
+    },
+    {
+      "date": "2024/09/30",
+      "title": "Late course applications open",
+      "time": "17:00",
+      "cy12d": true,
+      "cy12i": true,
+      "ny12": true,
+      "get": true,
+      "exclude_states": "",
+      "tag": "course"
+    },
+    {
+      "date": "2024/10/11",
+      "title": "SEAS and scholarships applications close",
+      "time": "17:00",
+      "cy12d": true,
+      "cy12i": true,
+      "ny12": true,
+      "get": true,
+      "exclude_states": "",
+      "tag": "equity"
+    },
+    {
+      "date": "2024/11/01",
+      "title": "Late course applications close",
+      "time": "17:00",
+      "cy12d": true,
+      "cy12i": true,
+      "ny12": true,
+      "get": true,
+      "exclude_states": "",
+      "tag": "course"
+    },
+    {
+      "date": "2024/11/01",
+      "title": "Very late course applications open",
+      "time": "17:00",
+      "cy12d": true,
+      "cy12i": true,
+      "ny12": true,
+      "get": false,
+      "exclude_states": "",
+      "tag": "course"
+    },
+    {
+      "date": "2024/12/06",
+      "title": "Very late course applications close",
+      "time": "17:00",
+      "cy12d": true,
+      "cy12i": true,
+      "ny12": true,
+      "get": false,
+      "exclude_states": "",
+      "tag": "course"
+    },
+    {
+      "date": "2024/12/06",
+      "title": "Applications open for January round 2 offers and subsequent rounds",
+      "cy12d": true,
+      "cy12i": true,
+      "ny12": true,
+      "get": false,
+      "exclude_states": "",
+      "tag": "course"
+    },
+    {
+      "date": "2024/12/12",
+      "title": "VCE results and ATAR available online",
+      "time": "07:00",
+      "cy12d": true,
+      "cy12i": true,
+      "ny12": false,
+      "get": false,
+      "exclude_states": "",
+      "tag": "atar"
+    },
+    {
+      "date": "2024/12/23",
+      "title": "December offers released for domestic year 12 students",
+      "time": "14:00",
+      "cy12d": true,
+      "cy12i": false,
+      "ny12": false,
+      "get": false,
+      "exclude_states": "NT, SA, WA",
+      "tag": "offers"
+    },
+    {
+      "date": "2024/12/23",
+      "title": "December offers released for international year 12 students",
+      "time": "14:00",
+      "cy12d": false,
+      "cy12i": true,
+      "ny12": false,
+      "get": false,
+      "exclude_states": "NT, SA, WA",
+      "tag": "offers"
+    },
+    {
+      "date": "2025/01/06",
+      "title": "January round 1 offers released for international applicants",
+      "time": "14:00",
+      "cy12d": false,
+      "cy12i": true,
+      "ny12": false,
+      "get": false,
+      "exclude_states": "",
+      "tag": "offers"
+    },
+    {
+      "date": "2025/01/10",
+      "title": "January round 1 offers released for domestic applicants",
+      "time": "14:00",
+      "cy12d": true,
+      "cy12i": false,
+      "ny12": false,
+      "get": false,
+      "exclude_states": "",
+      "tag": "offers"
+    }
+  ]
+}
