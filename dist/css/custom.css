@@ -421,7 +421,7 @@ a.ms-link {
     color: #111111;
     min-width: 90px;
     max-width: 120px;
-    font-weight: normal;
+    font-weight: 700;
   }
 
   a.ms-link {
@@ -433,7 +433,7 @@ a.ms-link {
     display: flex;
     justify-content: center;
     color: #111111;
-    font-weight: normal;
+    font-weight: 700;
     width: 50px;
   }
   a.ms-link span.nav-link {
@@ -774,6 +774,10 @@ legend {
   border: 2px solid #06068f !important;
   padding-top: 0.7rem !important;
   padding-bottom: 0.7rem !important;
+  color: #ffffff;
+}
+.btn.btn-primary.btn:hover, .btn.btn-primary.btn:focus, .btn.btn-primary.btn:active {
+  background-color: #05059b !important;
 }
 .btn.btn-outline-primary {
   color: #06068f !important;
@@ -1258,6 +1262,7 @@ a.material-icons {
 
   a.ms-link {
     font-size: 12px;
+    font-weight: 700;
   }
 }
 /*Bootstrap 3*/
