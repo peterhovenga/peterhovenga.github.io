@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&family=Source+Serif+4:wght@700;900&display=swap");
 html {
   height: 100%;
@@ -851,7 +852,6 @@ legend {
   }
 }
 /* headings */
-h1,
 h2,
 h3,
 h4,
@@ -861,7 +861,6 @@ h6 {
   font-weight: bold;
 }
 
-h1:first-of-type,
 h2:first-of-type,
 h3:first-of-type,
 h4:first-of-type,
@@ -879,9 +878,13 @@ h5 + h6:first-of-type {
 
 h1 {
   font-family: "Poppins", sans-serif;
-  padding: 0 0 15px 0;
-  font-family: "Poppins", sans-serif;
   color: #002f6c;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+h1:before {
+  content: " ";
 }
 
 h3,
